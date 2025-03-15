@@ -1,14 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 231</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Home Page - Luis Eleazar Lizano Rojas</title>
+  <meta name="description" content="Course Home Page for Luis Eleazar Lizano Rojas">
+  <meta name="author" content="Luis Eleazar Lizano Rojas">
+  <link rel="stylesheet" href="styles/main.css">
+  <script defer src="scripts/hamburger.js"></script>
+  <script defer src="scripts/date.js"></script>
+  <script defer src="scripts/course.js"></script>
 </head>
-
 <body>
-    <h1> WDD 231 - Lizano</h1>
+  <!-- Skip Link for keyboard navigation -->
+  <a class="skip-link" href="#maincontent">Skip to main content</a>
+  
+  <header>
+    <div class="header-center">
+      <img src="images/profile.jpg" alt="Luis Eleazar Lizano Rojas profile picture">
+      <span class="header-name">Luis Eleazar Lizano Rojas</span>
+    </div>
+    <button
+      id="hamburger-btn"
+      class="hamburger"
+      type="button"
+      aria-label="Toggle navigation"
+      aria-expanded="false"
+      aria-controls="nav-menu"
+    >
+      ☰
+    </button>
+  </header>
+  
+  <nav id="nav-menu">
+    <ul>
+      <li><a href="index.html" aria-current="page">Home</a></li>
+      <li><a href="#">Chamber</a></li>
+      <li><a href="https://github.com/Luchogator" target="_blank" rel="noopener">GitHub Profile</a></li>
+      <li><a href="https://www.linkedin.com/in/luislizano/" target="_blank" rel="noopener">LinkedIn</a></li>
+    </ul>
+  </nav>
+  
+  <main id="maincontent">
+    <h1 class="main-title">Home</h1>
+    <div class="grid-container">
+      <section class="course-work">
+        <h2>Course Work</h2>
+        <div class="content">
+          <ul>
+            <li><a href="https://luchogator.github.io/wdd130/wwr/" target="_blank" rel="noopener">Rafting Site</a></li>
+            <li><a href="https://luchogator.github.io/wdd131/" target="_blank" rel="noopener">About Me</a></li>
+            <li><a href="https://luchogator.github.io/wdd131/filtered-temples.html" target="_blank" rel="noopener">Filtered Temples</a></li>
+            <li><a href="https://luchogator.github.io/wdd131/place.html" target="_blank" rel="noopener">Place Switzerland</a></li>
+            <li><a href="https://luchogator.github.io/wdd131/project/" target="_blank" rel="noopener">Cooking for Coders</a></li>
+          </ul>
+        </div>
+      </section>
+      <section class="location">
+        <h2>Tarapoto, Peru</h2>
+        <div class="content">
+          <img src="images/tarapoto.webp" alt="Tarapoto, Peru" loading="lazy">
+          <p>Tarapoto: A jungle paradise in Peru, showcased by its vibrant plaza.</p>
+        </div>
+      </section>
+    </div>
+    <section class="certificate">
+      <h2>Web and Computer Programming Certificate</h2>
+      <div class="content">
+        <div class="filter-buttons">
+          <button id="all" aria-pressed="true">All</button>
+          <button id="cse" aria-pressed="false">CSE</button>
+          <button id="wdd" aria-pressed="false">WDD</button>
+        </div>
+        <div class="courses" id="courses"></div>
+        <p id="total-credits"></p>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <p class="footer-text">© <span id="currentYear"></span> 🦎 Luis Eleazar Lizano Rojas 🦎 - Tarapoto, Peru</p>
+    <p class="footer-text" id="lastModified">Last Modified: <span id="lastModifiedDate"></span></p>
+  </footer>
 </body>
-
 </html>
