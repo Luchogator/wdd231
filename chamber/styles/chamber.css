@@ -1,6 +1,5 @@
 /* ======================
    BASE STYLES
-   Sets box-sizing and removes default margins/paddings
 ====================== */
 * {
   box-sizing: border-box;
@@ -15,9 +14,8 @@ body {
 }
 
 /* ======================
-   LAYOUT COMPONENTS
+   COLOR VARIABLES
 ====================== */
-/* Common green theme colors */
 :root {
   --primary-green: #0B3D02;
   --dark-green: #0A3502;
@@ -25,7 +23,9 @@ body {
   --footer-green: #0E3B06;
 }
 
-/* Header */
+/* ======================
+   HEADER
+====================== */
 header {
   background-color: var(--primary-green);
   padding: 15px;
@@ -71,10 +71,12 @@ header {
   margin-top: 5px;
 }
 
-/* Navigation */
+/* ======================
+   NAVIGATION
+====================== */
 nav {
   background-color: var(--dark-green);
-  display: flex;
+  display: flex; 
   justify-content: center;
 }
 
@@ -84,11 +86,9 @@ nav ul {
   gap: 30px;
   margin: 0;
   padding: 10px;
-  max-height: none;
-  opacity: 1;
-  transition: max-height 0.4s ease, opacity 0.4s ease;
 }
 
+/* Enlaces de navegación */
 nav ul li a {
   color: #fff;
   text-decoration: none;
@@ -98,9 +98,12 @@ nav ul li a {
   border-radius: 4px;
 }
 
-nav ul li a:hover {
-  text-decoration: underline;
+nav ul li a:hover,
+nav ul li a:focus,
+nav ul li a:active {
   background-color: var(--darker-green);
+  color: #fff;
+  text-decoration: underline;
 }
 
 /* Hamburger button */
@@ -116,7 +119,9 @@ nav ul li a:hover {
   min-height: 48px;
 }
 
-/* Hero Section */
+/* ======================
+   HERO
+====================== */
 .hero {
   position: relative;
   text-align: center;
@@ -141,7 +146,9 @@ nav ul li a:hover {
   border-radius: 5px;
 }
 
-/* Main Content */
+/* ======================
+   MAIN
+====================== */
 main {
   max-width: 1200px;
   margin: 20px auto;
@@ -153,7 +160,9 @@ main h2 {
   margin-bottom: 20px;
 }
 
-/* Directory View Toggle */
+/* ======================
+   DIRECTORY VIEW TOGGLE
+====================== */
 .view-toggle {
   display: flex;
   justify-content: center;
@@ -176,7 +185,9 @@ main h2 {
   background-color: var(--darker-green);
 }
 
-/* Member Container Views */
+/* ======================
+   MEMBER CARDS
+====================== */
 #member-container.grid-view {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -195,7 +206,6 @@ main h2 {
   align-items: center;
 }
 
-/* Member Cards */
 .member-card {
   display: flex;
   flex-direction: column;
@@ -246,7 +256,9 @@ main h2 {
   border-top: 1px solid #ccc;
 }
 
-/* Footer */
+/* ======================
+   FOOTER
+====================== */
 footer {
   background-color: var(--footer-green);
   color: #fff;
@@ -301,28 +313,26 @@ footer {
    MEDIA QUERIES
 ====================== */
 @media (max-width: 768px) {
-  /* Mobile Navigation */
+
+  main {
+    margin-top: 120px; 
+  }
+
   .hamburger {
     display: block;
   }
-  
-  nav ul {
+
+  #chamber-nav.active ul {
+    display: flex;
     flex-direction: column;
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
+    align-items: center;
+    text-align: center;
   }
-  
-  nav.active ul {
-    max-height: 600px;
-    opacity: 1;
+
+  #chamber-nav:not(.active) ul {
+    display: none;
   }
-  
-  /* Mobile Grid */
-  #member-container.grid-view {
-    grid-template-columns: 1fr;
-  }
-  
+
   /* Mobile Footer */
   .footer-container {
     flex-direction: column;
