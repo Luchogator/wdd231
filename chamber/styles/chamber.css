@@ -308,11 +308,7 @@ main h2 {
   padding: 1.5rem;
 }
 
-.forecast-content p {
-  font-style: var(--italic-style);
-}
-
-/* Forecast styles */
+/* Forecast styles - consolidated */
 .forecast p {
   margin: 0.75rem 0;
   font-size: 1.1rem;
@@ -634,7 +630,7 @@ footer {
   }
 }
 
-/* Media Queries for Directory */
+/* Consolidated Media Queries */
 @media screen and (max-width: 960px) {
   .chamber-title {
     font-size: 1.5rem;
@@ -752,61 +748,6 @@ footer {
   }
 }
 
-/* Media Queries for Directory */
-@media screen and (max-width: 768px) {
-  #member-container.grid-view {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .list-view .member-card {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 1.5rem;
-  }
-
-  .list-view .member-card .member-img {
-    margin: 0 auto 1rem;
-  }
-
-  .list-view .member-card .member-info {
-    padding: 0;
-    text-align: center;
-  }
-
-  .list-view .member-card .member-info h3,
-  .list-view .member-card .member-info .tagline,
-  .list-view .member-card .member-info p {
-    text-align: center;
-  }
-}
-
-/* Weather Icon Styles */
-.weather-icon-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 10px;
-  width: 100%;
-  background-color: #e0e0e0;
-  padding: 10px;
-  border-radius: 8px;
-  text-align: center;
-}
-
-.weather-icon {
-  width: 80px;
-  height: 80px;
-  object-fit: contain;
-  margin: 0 auto;
-}
-
-.weather-description {
-  margin-top: 0.5rem;
-  text-align: center;
-  color: #333;
-}
-
 /* Weather Unit Toggle Button */
 .unit-toggle {
   background-color: var(--primary-green);
@@ -876,35 +817,9 @@ h6 {
   margin-bottom: 0.5em;
 }
 
-/* Specific Lighthouse fixes */
-.weather-icon-container {
-  width: 80px;
-  height: 80px;
-  margin: 0 auto;
-}
-
-.weather-icon {
-  width: 80px;
-  height: 80px;
-  object-fit: contain;
-}
-
 /* Performance optimizations */
 /* Use will-change judiciously for elements that animate */
-#chamber-nav {
-  will-change: max-height;
-  transition: max-height 0.3s ease-in-out, opacity 0.2s ease-in-out;
-  max-height: 0;
-  overflow: hidden;
-  background-color: var(--dark-green);
-  width: 100%;
-  opacity: 1;
-}
-
-#chamber-nav.open {
-  max-height: 300px;
-  opacity: 1;
-}
+/* Remove duplicated chamber-nav styles here */
 
 /* Optimize animations */
 .member-card:hover,
