@@ -24,17 +24,12 @@ body {
   --footer-green: #0E3B06;
   --button-text: #ffffff;
   --link-blue: #0056b3;
-  /* Color más oscuro para enlaces */
   --heading-color: #073d00;
-  /* Color más oscuro para títulos */
   --membership-color: #055a9d;
-  /* Color más oscuro para nivel de membresía */
   --view-toggle-active: #055a9d;
-  /* Color para botones activos de toggle */
   --footer-link: #ffffff;
-  /* Color para enlaces en el footer */
   --card-tagline: #333333;
-  /* Color más oscuro para taglines */
+  --italic-style: italic;
 }
 
 /* ======================
@@ -129,7 +124,6 @@ header {
   font-size: 1.1rem;
   transition: background-color 0.3s;
   font-weight: 500;
-  /* Aumentar peso de fuente para mejor contraste */
 }
 
 #chamber-nav a:hover,
@@ -223,7 +217,6 @@ main h2 {
   font-size: 1.2rem;
   border-bottom: 3px solid var(--darker-green);
   font-weight: 600;
-  /* Aumentar peso de fuente para mejor contraste */
 }
 
 /* Events Section */
@@ -265,6 +258,7 @@ main h2 {
   color: var(--primary-green);
 }
 
+/* Weather Icon Styles */
 .weather-icon-container {
   display: flex;
   flex-direction: column;
@@ -274,12 +268,14 @@ main h2 {
   background-color: #e0e0e0;
   padding: 10px;
   border-radius: 8px;
+  text-align: center;
 }
 
 .weather-icon {
   width: 80px;
   height: 80px;
   object-fit: contain;
+  margin: 0 auto;
 }
 
 .weather-description {
@@ -301,7 +297,6 @@ main h2 {
   padding: 0.5rem 0;
   border-bottom: 1px solid #e0e0e0;
   color: #000000;
-  /* Texto más oscuro para mejor contraste */
 }
 
 .weather-details p:last-child {
@@ -313,6 +308,11 @@ main h2 {
   padding: 1.5rem;
 }
 
+.forecast-content p {
+  font-style: var(--italic-style);
+}
+
+/* Forecast styles */
 .forecast p {
   margin: 0.75rem 0;
   font-size: 1.1rem;
@@ -320,6 +320,8 @@ main h2 {
   justify-content: space-between;
   padding: 0.5rem 0;
   border-bottom: 1px solid #e0e0e0;
+  font-style: var(--italic-style);
+  line-height: 1.6;
 }
 
 .forecast p:last-child {
@@ -375,7 +377,7 @@ main h2 {
 }
 
 .business-card .tagline {
-  font-style: italic;
+  font-style: var(--italic-style);
   color: var(--card-tagline);
   margin-bottom: 1rem;
   font-size: 0.9rem;
@@ -555,7 +557,7 @@ footer {
 }
 
 .member-card .tagline {
-  font-style: italic;
+  font-style: var(--italic-style);
   color: var(--card-tagline);
   font-weight: 500;
   margin-bottom: 15px;
@@ -596,7 +598,7 @@ footer {
 }
 
 .list-view .member-card .member-info .tagline {
-  font-style: italic;
+  font-style: var(--italic-style);
   color: #444;
   margin-bottom: 6px;
 }
@@ -633,30 +635,6 @@ footer {
 }
 
 /* Media Queries for Directory */
-@media screen and (max-width: 768px) {
-  #member-container.grid-view {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .list-view .member-card {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .list-view .member-img {
-    width: 100%;
-    max-width: 200px;
-    margin: 0 auto 15px auto;
-    grid-row: auto;
-  }
-
-  .list-view .member-card h3,
-  .list-view .member-card p {
-    grid-column: 1;
-  }
-}
-
-/* Media Queries */
 @media screen and (max-width: 960px) {
   .chamber-title {
     font-size: 1.5rem;
@@ -672,13 +650,11 @@ footer {
 
   #chamber-nav {
     display: none;
-    /* Cambiado de 'block' a 'none' inicialmente */
     max-height: 0;
   }
 
   #chamber-nav.open {
     display: block;
-    /* Se muestra cuando está abierto */
     max-height: 300px;
   }
 
@@ -751,9 +727,7 @@ footer {
 
   #chamber-nav {
     display: block !important;
-    /* Fuerza la visualización en pantallas grandes */
     max-height: none !important;
-    /* Elimina la restricción de altura */
     overflow: visible;
   }
 
@@ -778,17 +752,53 @@ footer {
   }
 }
 
+/* Media Queries for Directory */
+@media screen and (max-width: 768px) {
+  #member-container.grid-view {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .list-view .member-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  .list-view .member-card .member-img {
+    margin: 0 auto 1rem;
+  }
+
+  .list-view .member-card .member-info {
+    padding: 0;
+    text-align: center;
+  }
+
+  .list-view .member-card .member-info h3,
+  .list-view .member-card .member-info .tagline,
+  .list-view .member-card .member-info p {
+    text-align: center;
+  }
+}
+
 /* Weather Icon Styles */
 .weather-icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  width: 100%;
+  background-color: #e0e0e0;
+  padding: 10px;
+  border-radius: 8px;
   text-align: center;
-  margin: 1rem 0;
 }
 
 .weather-icon {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
   margin: 0 auto;
-  display: block;
 }
 
 .weather-description {
@@ -816,38 +826,16 @@ footer {
   outline: 2px solid #fff;
 }
 
-.weather-icon-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 10px;
-}
-
-.weather-icon {
-  width: 80px;
-  height: 80px;
-  margin: 0 auto;
-  display: block;
-}
-
-.weather-description {
-  font-size: 1rem;
-  margin-top: 5px;
-  text-align: center;
-}
-
 /* Image sizing for better CLS prevention */
 img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
-  aspect-ratio: attr(width) / attr(height);
-  /* Modern browsers */
 }
 
 .hero-img {
-  aspect-ratio: 16/9;
   width: 100%;
   height: auto;
+  display: block;
 }
 
 .member-img img,
@@ -962,10 +950,12 @@ img {
 /* Fix hamburger menu animation */
 @media screen and (max-width: 960px) {
   #chamber-nav {
-    display: block;
+    display: none;
+    max-height: 0;
   }
 
   #chamber-nav.open {
+    display: block;
     max-height: 300px;
   }
 }
@@ -990,7 +980,7 @@ img {
 }
 
 .member-info .tagline {
-  font-style: italic;
+  font-style: var(--italic-style);
   color: #333;
   font-weight: 500;
   margin-bottom: 6px;
@@ -1000,35 +990,6 @@ img {
   margin: 8px 0;
   border: none;
   border-top: 1px solid #ccc;
-}
-
-/* Media Queries for Directory */
-@media screen and (max-width: 768px) {
-  #member-container.grid-view {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .list-view .member-card {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 1.5rem;
-  }
-
-  .list-view .member-card .member-img {
-    margin: 0 auto 1rem;
-  }
-
-  .list-view .member-card .member-info {
-    padding: 0;
-    text-align: center;
-  }
-
-  .list-view .member-card .member-info h3,
-  .list-view .member-card .member-info .tagline,
-  .list-view .member-card .member-info p {
-    text-align: center;
-  }
 }
 
 /* Footer styles */
@@ -1045,7 +1006,7 @@ img {
   outline: 2px solid #fff200;
 }
 
-/* Mejoras para contraste en links */
+/* Links with better contrast */
 a {
   color: var(--link-blue);
   text-decoration: underline;
@@ -1057,7 +1018,7 @@ a:focus {
   color: #003c7e;
 }
 
-/* Mejorar contraste de enlaces de tarjetas de miembros */
+/* Member card links with better contrast */
 .member-card a,
 .business-card a {
   color: #00458b;

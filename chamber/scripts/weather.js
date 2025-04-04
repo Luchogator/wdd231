@@ -99,7 +99,7 @@ async function apiFetch() {
 function displayResults(data, isNewData = false) {
     // Get base temperatures from original data
     const originalUnit = data.originalUnit || 'metric';
-    const tempUnit = currentUnit === 'metric' ? 'C' : 'F';
+    const tempUnit = currentUnit === 'metric' ? '&#8451;' : '&#8457;';
 
     console.log(`Converting from ${originalUnit} to ${currentUnit}`);
 
@@ -136,8 +136,8 @@ function displayResults(data, isNewData = false) {
         }
     }
 
-    // Display temps with no decimal points
-    currentTemp.innerHTML = `${Math.round(mainTemp)}&deg;${tempUnit}`;
+    // Display temps with no decimal points and correct HTML entity for degrees
+    currentTemp.innerHTML = `${Math.round(mainTemp)}${tempUnit}`;
 
     // Set weather icon
     const iconsrc = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
@@ -148,10 +148,10 @@ function displayResults(data, isNewData = false) {
     const desc = capitalizeWords(data.weather[0].description);
     weatherDescription.textContent = desc;
 
-    // Update weather details
+    // Update weather details with correct HTML entity for degrees
     weatherDetails.innerHTML = `
-        <p>High: ${Math.round(maxTemp)}&deg;${tempUnit}</p>
-        <p>Low: ${Math.round(minTemp)}&deg;${tempUnit}</p>
+        <p>High: ${Math.round(maxTemp)}${tempUnit}</p>
+        <p>Low: ${Math.round(minTemp)}${tempUnit}</p>
         <p>Humidity: ${data.main.humidity}%</p>
         <p>Wind: ${windSpeed.toFixed(1)} ${currentUnit === 'metric' ? 'm/s' : 'mph'}</p>
     `;
@@ -175,9 +175,9 @@ function updateForecast(tempUnit) {
         // Define day labels
         const days = ['Today', 'Tomorrow', 'Thursday'];
 
-        // Create the forecast HTML
+        // Create the forecast HTML with correct HTML entity for degrees
         forecastContent.innerHTML = days.map((day, index) =>
-            `<p>${day}: ${Math.round(temps[index])}&deg;${tempUnit}</p>`
+            `<p>${day}: ${Math.round(temps[index])}${tempUnit}</p>`
         ).join('');
     }
 }
@@ -186,20 +186,20 @@ function updateForecast(tempUnit) {
 function displayFallbackWeather() {
     console.log('Using fallback weather data for Tarapoto');
 
-    const tempUnit = currentUnit === 'metric' ? 'C' : 'F';
+    const tempUnit = currentUnit === 'metric' ? '&#8451;' : '&#8457;';
     const temp = currentUnit === 'metric' ? 27 : 81;      // More realistic for Tarapoto
     const high = currentUnit === 'metric' ? 32 : 90;
     const low = currentUnit === 'metric' ? 22 : 72;
     const windSpeed = currentUnit === 'metric' ? 3.5 : 7.8; // 3.5 m/s ≈ 7.8 mph
 
-    currentTemp.innerHTML = `${temp}&deg;${tempUnit}`;
+    currentTemp.innerHTML = `${temp}${tempUnit}`;
     weatherIcon.src = 'images/weather-icon.png';
     weatherIcon.alt = 'Partly cloudy weather icon';
     weatherDescription.textContent = 'Partly Cloudy';
 
     weatherDetails.innerHTML = `
-        <p>High: ${high}&deg;${tempUnit}</p>
-        <p>Low: ${low}&deg;${tempUnit}</p>
+        <p>High: ${high}${tempUnit}</p>
+        <p>Low: ${low}${tempUnit}</p>
         <p>Humidity: 65%</p>
         <p>Wind: ${windSpeed.toFixed(1)} ${currentUnit === 'metric' ? 'm/s' : 'mph'}</p>
     `;
@@ -216,6 +216,7 @@ function displayWeather(weatherData) {
     const windSpeed = weatherData.wind.speed;
     const windDirection = getWindDirection(weatherData.wind.deg);
     const humidity = weatherData.main.humidity;
+    const tempUnit = currentUnit === 'metric' ? '&#8451;' : '&#8457;';
 
     // Store the original temperature and wind speed values for conversions
     weatherContainer.dataset.tempC = temp;
@@ -223,8 +224,8 @@ function displayWeather(weatherData) {
 
     // Update the DOM with weather data
     weatherContainer.innerHTML = `
-        <p class="weather-temp">${temp}°C</p>
-        <button class="toggle-unit">Switch to °F</button>
+        <p class="weather-temp">${temp}${tempUnit}</p>
+        <button class="toggle-unit">Switch to ${currentUnit === 'metric' ? '°F' : '°C'}</button>
         <div class="weather-icon-container">
             <img src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="${description}" class="weather-icon">
             <p class="weather-description">${description}</p>
