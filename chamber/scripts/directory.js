@@ -1,56 +1,77 @@
-document.addEventListener("DOMContentLoaded", async function () {
-  const memberContainer = document.getElementById("member-container");
-  const gridBtn = document.getElementById("grid-view");
-  const listBtn = document.getElementById("list-view");
-
-  let members = [];
+document.addEventListener('DOMContentLoaded', async function () {
+  const memberContainer = document.getElementById('member-container');
+  const gridBtn = document.getElementById('grid-view');
+  const listBtn = document.getElementById('list-view');
+  let currentMembers = [];
 
   async function fetchMembers() {
     try {
-      const response = await fetch("data/members.json");
-      members = await response.json();
-      displayMembers();
+      const response = await fetch('data/members.json');
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      const data = await response.json();
+      return data.members;
     } catch (error) {
-      console.error("Error fetching members:", error);
-      memberContainer.innerHTML = "<p>Error loading member data.</p>";
+      console.error('Error loading members:', error);
+      memberContainer.innerHTML = '<p>Error loading member data. Please try again later.</p>';
+      return [];
     }
   }
 
-  function displayMembers() {
-    memberContainer.innerHTML = "";
-    members.forEach(member => {
-      const card = document.createElement("div");
-      card.className = "member-card";
-      card.innerHTML = `
-        <div class="member-img">
-          <img src="images/${member.image}" alt="${member.name} logo" />
-        </div>
-        <div class="member-info">
-          <h3>${member.name}</h3>
-          <p class="tagline">${member.tagline}</p>
-          <hr>
-          <p><strong>Address:</strong> ${member.address}</p>
-          <p><strong>Phone:</strong> ${member.phone}</p>
-          <p><strong>Website:</strong> <a href="${member.website}" target="_blank" rel="noopener">${member.website}</a></p>
-          <p><strong>Membership:</strong> ${member.membership}</p>
-        </div>
-      `;
-      memberContainer.appendChild(card);
-    });
+  function displayMembers(members, viewMode = 'grid') {
+    if (!members.length) return;
+
+    // Set the view mode class on the container
+    memberContainer.className = viewMode + '-view';
+
+    memberContainer.innerHTML = members.map(member => {
+      // Try both .jpg and .png extensions
+      const imageName = member.image.split('.')[0];
+      const imagePathJPG = `images/${imageName}.jpg`;
+      const imagePathPNG = `images/${imageName}.png`;
+
+      return `
+                <article class="member-card">
+                    <div class="member-img">
+                        <img src="${imagePathJPG}" 
+                             alt="${member.name} logo" 
+                             onerror="this.onerror=null; this.src='${imagePathPNG}'"
+                             loading="lazy">
+                    </div>
+                    <div class="member-info">
+                        <h3>${member.name}</h3>
+                        <p class="tagline">${member.tagline}</p>
+                        <p class="address"><strong>Address:</strong> ${member.address}</p>
+                        <p class="phone"><strong>Phone:</strong> ${member.phone}</p>
+                        <p class="email"><strong>Email:</strong> ${member.email}</p>
+                        <p class="website"><strong>Website:</strong> <a href="${member.website}" target="_blank" rel="noopener">${new URL(member.website).hostname}</a></p>
+                        <p class="membership-level">${member.membershipLevel} Member</p>
+                    </div>
+                </article>
+            `;
+    }).join('');
   }
 
-  // Buttons: Grid / List
-  gridBtn.addEventListener("click", function () {
-    gridBtn.setAttribute("aria-pressed", "true");
-    listBtn.setAttribute("aria-pressed", "false");
-    memberContainer.className = "grid-view";
+  // Event listeners for view toggles
+  gridBtn.addEventListener('click', function () {
+    gridBtn.classList.add('active');
+    listBtn.classList.remove('active');
+    displayMembers(currentMembers, 'grid');
   });
 
-  listBtn.addEventListener("click", function () {
-    gridBtn.setAttribute("aria-pressed", "false");
-    listBtn.setAttribute("aria-pressed", "true");
-    memberContainer.className = "list-view";
+  listBtn.addEventListener('click', function () {
+    listBtn.classList.add('active');
+    gridBtn.classList.remove('active');
+    displayMembers(currentMembers, 'list');
   });
 
-  fetchMembers();
+  // Initial load
+  try {
+    currentMembers = await fetchMembers();
+    displayMembers(currentMembers, 'grid');
+    gridBtn.classList.add('active'); // Set initial active state
+  } catch (error) {
+    console.error('Error during initial load:', error);
+  }
 });

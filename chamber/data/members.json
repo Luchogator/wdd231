@@ -1,83 +1,94 @@
-[
-  {
-    "name": "Chocolates Oro Verde",
-    "tagline": "Fine Chocolate Producer",
-    "address": "Av Circunvalacion 101, Tarapoto, Peru",
-    "phone": "+51 942-123456",
-    "website": "http://chocolatesoroverde.pe",
-    "image": "chocolates-oro-verde.jpg",
-    "membership": "Gold"
-  },
-  {
-    "name": "Hotel Rio Cumbaza",
-    "tagline": "Your Comfort in the Amazon",
-    "address": "Jr Maynas 341, Tarapoto, Peru",
-    "phone": "+51 942-987654",
-    "website": "http://hotelriocumbaza.pe",
-    "image": "hotel-rio-cumbaza.jpg",
-    "membership": "Silver"
-  },
-  {
-    "name": "Ganaderia San Martin",
-    "tagline": "Quality Livestock Solutions",
-    "address": "Carretera Fernando Belaunde km 15, Tarapoto, Peru",
-    "phone": "+51 942-567890",
-    "website": "http://ganaderiasanmartin.pe",
-    "image": "ganaderia-san-martin.jpg",
-    "membership": "Bronze"
-  },
-  {
-    "name": "Forestal Alto Mayo",
-    "tagline": "Sustainable Forest Projects",
-    "address": "Prolong Lima 210, Tarapoto, Peru",
-    "phone": "+51 942-345678",
-    "website": "http://forestalaltomayo.pe",
-    "image": "forestal-alto-mayo.jpg",
-    "membership": "Gold"
-  },
-  {
-    "name": "Turismo Lamas Tours",
-    "tagline": "Explore the Magic of Lamas",
-    "address": "Jr San Martin 555, Lamas, Peru",
-    "phone": "+51 942-112233",
-    "website": "http://lamastours.pe",
-    "image": "turismo-lamas-tours.jpg",
-    "membership": "Silver"
-  },
-  {
-    "name": "Telecom SelvaCom",
-    "tagline": "Connecting the Jungle",
-    "address": "Av Peru 999, Tarapoto, Peru",
-    "phone": "+51 942-334455",
-    "website": "http://selvacom.pe",
-    "image": "telecom-selvacom.jpg",
-    "membership": "Bronze"
-  },
-  {
-    "name": "Restaurante El Bijao",
-    "tagline": "Traditional Amazon Cuisine",
-    "address": "Jr Camila Morey 123, Tarapoto, Peru",
-    "phone": "+51 942-778899",
-    "website": "http://elbijao.pe",
-    "image": "restaurante-el-bijao.jpg",
-    "membership": "Bronze"
-  },
-  {
-    "name": "AgroExport San Martin",
-    "tagline": "Bringing Crops Worldwide",
-    "address": "Carretera Marginal Sur km 12, Tarapoto, Peru",
-    "phone": "+51 942-556677",
-    "website": "http://agroexportsm.pe",
-    "image": "agroexport-san-martin.png",
-    "membership": "Gold"
-  },
-  {
-    "name": "Cacao del Sol",
-    "tagline": "Premium Cacao Delights",
-    "address": "Jr Alfonso Ugarte 212, Tarapoto, Peru",
-    "phone": "+51 942-443322",
-    "website": "http://cacaodelsol.pe",
-    "image": "cacao-del-sol.jpg",
-    "membership": "Silver"
-  }
-]
+{
+  "members": [
+    {
+      "name": "AgroExport San Martin",
+      "image": "agroexport-san-martin.jpg",
+      "tagline": "Bringing Crops Worldwide",
+      "membershipLevel": "Gold",
+      "email": "info@agroexportsanmartin.com",
+      "phone": "+51 942-556677",
+      "address": "Carretera Marginal Sur km 12, Tarapoto, Peru",
+      "website": "https://www.agroexportsanmartin.com"
+    },
+    {
+      "name": "Chocolates Oro Verde",
+      "image": "chocolates-oro-verde.jpg",
+      "tagline": "Fine Chocolate Producer",
+      "membershipLevel": "Gold",
+      "email": "contact@oroverde.pe",
+      "phone": "+51 942-123456",
+      "address": "Av Circunvalacion 101, Tarapoto, Peru",
+      "website": "https://www.oroverde.pe"
+    },
+    {
+      "name": "Cacao del Sol",
+      "image": "cacao-del-sol.jpg",
+      "tagline": "Premium Cacao Delights",
+      "membershipLevel": "Silver",
+      "email": "info@cacaodelsol.pe",
+      "phone": "+51 942-443322",
+      "address": "Jr Alfonso Ugarte 212, Tarapoto, Peru",
+      "website": "https://www.cacaodelsol.pe"
+    },
+    {
+      "name": "Forestal Alto Mayo",
+      "image": "forestal-alto-mayo.jpg",
+      "tagline": "Sustainable Wood Products",
+      "membershipLevel": "Gold",
+      "email": "info@forestalaltomayo.com",
+      "phone": "+51 942-889900",
+      "address": "Carretera Fernando Belaunde Terry km 485, Moyobamba, Peru",
+      "website": "https://www.forestalaltomayo.com"
+    },
+    {
+      "name": "Hotel Rio Cumbaza",
+      "image": "hotel-rio-cumbaza.jpg",
+      "tagline": "Your Luxury Stay in Tarapoto",
+      "membershipLevel": "Silver",
+      "email": "reservas@hotelriocumbaza.com",
+      "phone": "+51 942-334455",
+      "address": "Jr. Jimenez Pimentel 126, Tarapoto, Peru",
+      "website": "https://www.hotelriocumbaza.com"
+    },
+    {
+      "name": "Turismo Lamas Tours",
+      "image": "turismo-lamas-tours.jpg",
+      "tagline": "Explore the Magic of Lamas",
+      "membershipLevel": "Silver",
+      "email": "info@lamastours.pe",
+      "phone": "+51 942-112233",
+      "address": "Jr San Martin 555, Lamas, Peru",
+      "website": "https://www.lamastours.pe"
+    },
+    {
+      "name": "Telecom SelvaCom",
+      "image": "telecom-selvacom.jpg",
+      "tagline": "Connecting the Jungle",
+      "membershipLevel": "Bronze",
+      "email": "info@selvacom.pe",
+      "phone": "+51 942-334455",
+      "address": "Av Peru 999, Tarapoto, Peru",
+      "website": "https://www.selvacom.pe"
+    },
+    {
+      "name": "Restaurante El Bijao",
+      "image": "restaurante-el-bijao.jpg",
+      "tagline": "Traditional Amazon Cuisine",
+      "membershipLevel": "Bronze",
+      "email": "info@elbijao.pe",
+      "phone": "+51 942-778899",
+      "address": "Jr Camila Morey 123, Tarapoto, Peru",
+      "website": "https://www.elbijao.pe"
+    },
+    {
+      "name": "Ganaderia San Martin",
+      "image": "ganaderia-san-martin.jpg",
+      "tagline": "Quality Livestock Solutions",
+      "membershipLevel": "Bronze",
+      "email": "info@ganaderiasanmartin.pe",
+      "phone": "+51 942-567890",
+      "address": "Carretera Fernando Belaunde km 15, Tarapoto, Peru",
+      "website": "https://www.ganaderiasanmartin.pe"
+    }
+  ]
+}
