@@ -956,7 +956,7 @@ main h1 {
   font-size: 2.5rem;
   margin: 1.5rem 0;
   width: 100%;
-  /* Esta línea oculta visualmente el h1 pero lo mantiene accesible para lectores de pantalla */
+  /* This line visually hides the h1 but keeps it accessible for screen readers */
   position: absolute;
   left: -9999px;
   height: 1px;
