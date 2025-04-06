@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en-US">
 
 <head>
     <meta charset="UTF-8">
@@ -16,7 +16,7 @@
     <meta property="og:description"
         content="Become a member of the Tarapoto Chamber of Commerce - Connect, grow, and thrive">
     <meta property="og:site_name" content="Tarapoto Chamber of Commerce">
-    <meta property="og:locale" content="es_PE">
+    <meta property="og:locale" content="en_US">
 
     <!-- Favicon -->
     <link rel="icon" href="images/favicon.ico">
@@ -80,37 +80,37 @@
                 <form id="membershipForm" action="thankyou.html" method="get">
                     <!-- First Name -->
                     <div class="form-group">
-                        <label for="firstname">First Name</label>
+                        <label for="firstname">First Name <span class="required">*</span></label>
                         <input type="text" id="firstname" name="firstname" required>
                     </div>
 
                     <!-- Last Name -->
                     <div class="form-group">
-                        <label for="lastname">Last Name</label>
+                        <label for="lastname">Last Name <span class="required">*</span></label>
                         <input type="text" id="lastname" name="lastname" required>
                     </div>
 
                     <!-- Title/Position -->
                     <div class="form-group">
-                        <label for="title">Title</label>
+                        <label for="title">Title/Position</label>
                         <input type="text" id="title" name="title">
                     </div>
 
                     <!-- Email -->
                     <div class="form-group">
-                        <label for="email">Email</label>
+                        <label for="email">Email <span class="required">*</span></label>
                         <input type="email" id="email" name="email" placeholder="john@example.com" required>
                     </div>
 
                     <!-- Phone -->
                     <div class="form-group">
-                        <label for="phone">Cell Phone</label>
+                        <label for="phone">Cell Phone <span class="required">*</span></label>
                         <input type="tel" id="phone" name="phone" placeholder="987-555-1234" required>
                     </div>
 
                     <!-- Organization/Business name -->
                     <div class="form-group">
-                        <label for="organization">Organization</label>
+                        <label for="organization">Organization/Business <span class="required">*</span></label>
                         <input type="text" id="organization" name="organization" required>
                     </div>
 
@@ -122,7 +122,7 @@
 
                     <!-- Membership Level -->
                     <div class="form-group membership-radios">
-                        <p>Membership Level</p>
+                        <p>Membership Level <span class="required">*</span></p>
                         <div class="radio-group">
                             <input type="radio" id="nonprofit" name="membershipLevel" value="nonprofit" required>
                             <label for="nonprofit">Non Profit Membership</label>
@@ -187,7 +187,7 @@
         <!-- Membership Details Modal -->
         <div id="membership-modal" class="modal">
             <div class="modal-content">
-                <span class="close-btn">&times;</span>
+                <span class="close-btn" aria-label="Close modal">&times;</span>
                 <div id="modal-details">
                     <!-- Modal content will be populated by JavaScript -->
                 </div>
@@ -201,7 +201,7 @@
             <div class="footer-left">
                 <p><strong>Location:</strong> Tarapoto, Peru 999</p>
                 <p><strong>Address:</strong> Av Lamas 123</p>
-                <p><strong>Email:</strong> <a href="mailto:info@tarapotochamber.pe"
+                <p><strong>Email:</strong> <a href="info@tarapotochamber.pe"
                         aria-label="Send email to Tarapoto Chamber of Commerce">info@tarapotochamber.pe</a></p>
                 <p><strong>Phone:</strong> <a href="tel:+51-555-2300"
                         aria-label="Call Tarapoto Chamber of Commerce">(+51)
