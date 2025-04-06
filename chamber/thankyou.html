@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Tarapoto Chamber of Commerce</title>
+    <meta name="description" content="Thank you for your application to the Tarapoto Chamber of Commerce">
+    <meta name="author" content="Luis Eleazar Lizano Rojas">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico">
+
+    <!-- Google Fonts with display=swap for better performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" media="print"
+        onload="this.media='all'">
+    <!-- Fallback for font loading -->
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    </noscript>
+
+    <!-- Chamber CSS -->
+    <link rel="stylesheet" href="styles/chamber.css">
+    <link rel="stylesheet" href="styles/join.css">
+
+    <!-- Scripts -->
+    <script defer src="scripts/hamburger.js"></script>
+    <script defer src="scripts/date.js"></script>
+    <script defer src="scripts/thankyou.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-left">
+            <div class="header-logo-title">
+                <!-- Optimized logo loading -->
+                <img src="images/logo-chamber.jpg" alt="Chamber Logo" class="chamber-logo" width="120" height="120"
+                    fetchpriority="high">
+                <div class="title-subtitle-container">
+                    <h2 class="chamber-title">Tarapoto Chamber of Commerce</h2>
+                    <p class="subtitle">Business Hub of Tarapoto, Peru</p>
+                </div>
+            </div>
+        </div>
+        <button id="hamburger-btn" class="hamburger" type="button" aria-label="Toggle navigation" aria-expanded="false"
+            aria-controls="chamber-nav">
+            ☰
+        </button>
+    </header>
+
+    <nav id="chamber-nav" aria-label="Main Navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="directory.html">Business Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Podcast</a></li>
+            <li><a href="#">Events</a></li>
+        </ul>
+    </nav>
+
+    <main id="maincontent">
+        <h1>Thank You for Your Application</h1>
+
+        <div class="thankyou-container">
+            <div class="thankyou-content">
+                <div class="success-icon">✓</div>
+                <h2>Application Received!</h2>
+                <p>Thank you for applying to join the Tarapoto Chamber of Commerce. We've received your application and
+                    are excited to welcome you to our business community!</p>
+
+                <h3>Application Details:</h3>
+                <div id="application-details" class="details-box">
+                    <!-- This will be filled by JavaScript with the form data -->
+                    <p class="loading">Loading submission details...</p>
+                </div>
+
+                <p class="next-steps">
+                    <strong>What happens next?</strong><br>
+                    Our membership team will review your application and contact you within 2-3 business days to
+                    complete the registration process.
+                </p>
+
+                <div class="button-container">
+                    <a href="index.html" class="primary-btn">Return to Home</a>
+                    <a href="directory.html" class="secondary-btn">View Business Directory</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <!-- Footer container with max-width for alignment -->
+        <div class="footer-container">
+            <div class="footer-left">
+                <p><strong>Location:</strong> Tarapoto, Peru 999</p>
+                <p><strong>Address:</strong> Av Lamas 123</p>
+                <p><strong>Email:</strong> <a href="mailto:info@tarapotochamber.pe"
+                        aria-label="Send email to Tarapoto Chamber of Commerce">info@tarapotochamber.pe</a></p>
+                <p><strong>Phone:</strong> <a href="tel:+51-555-2300"
+                        aria-label="Call Tarapoto Chamber of Commerce">(+51)
+                        555-2300</a></p>
+                <p><strong>RUC:</strong> 123456789</p>
+            </div>
+            <div class="footer-center">
+                <a href="https://facebook.com" target="_blank" rel="noopener" class="social-icon"
+                    aria-label="Visit our Facebook page">
+                    <img src="images/icons/facebook.png" alt="Facebook" width="60" height="60" loading="lazy">
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-icon"
+                    aria-label="Visit our LinkedIn page">
+                    <img src="images/icons/linkedin.png" alt="LinkedIn" width="60" height="60" loading="lazy">
+                </a>
+                <a href="https://youtube.com" target="_blank" rel="noopener" class="social-icon"
+                    aria-label="Visit our YouTube channel">
+                    <img src="images/icons/youtube.png" alt="YouTube" width="60" height="60" loading="lazy">
+                </a>
+            </div>
+            <div class="footer-right">
+                <p>WDD231 Class Project</p>
+                <p>by Luis Eleazar Lizano Rojas</p>
+                <p>© 2025 Tarapoto Chamber of Commerce - Tarapoto, Peru</p>
+                <p>Last Modified: <span id="lastModifiedDate"></span></p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

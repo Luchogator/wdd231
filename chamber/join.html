@@ -1,34 +1,235 @@
-<footer>
-    <!-- Footer container with max-width for alignment -->
-    <div class="footer-container">
-        <div class="footer-left">
-            <p><strong>Location:</strong> Tarapoto, Peru 999</p>
-            <p><strong>Address:</strong> Av Lamas 123</p>
-            <p><strong>Email:</strong> <a href="mailto:info@tarapotochamber.pe"
-                    aria-label="Send email to Tarapoto Chamber of Commerce">info@tarapotochamber.pe</a></p>
-            <p><strong>Phone:</strong> <a href="tel:+51-555-2300" aria-label="Call Tarapoto Chamber of Commerce">(+51)
-                    555-2300</a></p>
-            <p><strong>RUC:</strong> 123456789</p>
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join the Chamber - Tarapoto Chamber of Commerce</title>
+    <meta name="description" content="Join the Tarapoto Chamber of Commerce and grow your business with our network">
+    <meta name="author" content="Luis Eleazar Lizano Rojas">
+
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:title" content="Join the Tarapoto Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://luchogator.github.io/wdd231/chamber/images/chamber-hero.jpg">
+    <meta property="og:url" content="https://luchogator.github.io/wdd231/chamber/join.html">
+    <meta property="og:description"
+        content="Become a member of the Tarapoto Chamber of Commerce - Connect, grow, and thrive">
+    <meta property="og:site_name" content="Tarapoto Chamber of Commerce">
+    <meta property="og:locale" content="es_PE">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico">
+
+    <!-- Google Fonts with display=swap for better performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" media="print"
+        onload="this.media='all'">
+    <!-- Fallback for font loading -->
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    </noscript>
+
+    <!-- Chamber CSS -->
+    <link rel="stylesheet" href="styles/chamber.css">
+    <link rel="stylesheet" href="styles/join.css">
+
+    <!-- Scripts -->
+    <script defer src="scripts/hamburger.js"></script>
+    <script defer src="scripts/date.js"></script>
+    <script defer src="scripts/join.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-left">
+            <div class="header-logo-title">
+                <!-- Optimized logo loading -->
+                <img src="images/logo-chamber.jpg" alt="Chamber Logo" class="chamber-logo" width="120" height="120"
+                    fetchpriority="high">
+                <div class="title-subtitle-container">
+                    <h2 class="chamber-title">Tarapoto Chamber of Commerce</h2>
+                    <p class="subtitle">Business Hub of Tarapoto, Peru</p>
+                </div>
+            </div>
         </div>
-        <div class="footer-center">
-            <a href="https://facebook.com" target="_blank" rel="noopener" class="social-icon"
-                aria-label="Visit our Facebook page">
-                <img src="images/icons/facebook.png" alt="Facebook" width="60" height="60" loading="lazy">
-            </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-icon"
-                aria-label="Visit our LinkedIn page">
-                <img src="images/icons/linkedin.png" alt="LinkedIn" width="60" height="60" loading="lazy">
-            </a>
-            <a href="https://youtube.com" target="_blank" rel="noopener" class="social-icon"
-                aria-label="Visit our YouTube channel">
-                <img src="images/icons/youtube.png" alt="YouTube" width="60" height="60" loading="lazy">
-            </a>
+        <button id="hamburger-btn" class="hamburger" type="button" aria-label="Toggle navigation" aria-expanded="false"
+            aria-controls="chamber-nav">
+            ☰
+        </button>
+    </header>
+
+    <nav id="chamber-nav" aria-label="Main Navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="directory.html">Business Directory</a></li>
+            <li><a href="join.html" aria-current="page">Join</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Podcast</a></li>
+            <li><a href="#">Events</a></li>
+        </ul>
+    </nav>
+
+    <main id="maincontent">
+        <h1>Join the Tarapoto Chamber of Commerce</h1>
+
+        <div class="join-container">
+            <section class="form-section">
+                <h2>Membership Application Form</h2>
+                <form id="membershipForm" action="thankyou.html" method="get">
+                    <!-- First Name -->
+                    <div class="form-group">
+                        <label for="firstname">First Name</label>
+                        <input type="text" id="firstname" name="firstname" required>
+                    </div>
+
+                    <!-- Last Name -->
+                    <div class="form-group">
+                        <label for="lastname">Last Name</label>
+                        <input type="text" id="lastname" name="lastname" required>
+                    </div>
+
+                    <!-- Title/Position -->
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" id="title" name="title">
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="form-group">
+                        <label for="phone">Cell Phone</label>
+                        <input type="tel" id="phone" name="phone" placeholder="987-555-1234" required>
+                    </div>
+
+                    <!-- Organization/Business name -->
+                    <div class="form-group">
+                        <label for="organization">Organization</label>
+                        <input type="text" id="organization" name="organization" required>
+                    </div>
+
+                    <!-- Business Description -->
+                    <div class="form-group">
+                        <label for="description">Business Description</label>
+                        <textarea id="description" name="description" rows="4"></textarea>
+                    </div>
+
+                    <!-- Membership Level -->
+                    <div class="form-group membership-radios">
+                        <p>Membership Level</p>
+                        <div class="radio-group">
+                            <input type="radio" id="nonprofit" name="membershipLevel" value="nonprofit" required>
+                            <label for="nonprofit">Non Profit Membership</label>
+                        </div>
+
+                        <div class="radio-group">
+                            <input type="radio" id="bronze" name="membershipLevel" value="bronze">
+                            <label for="bronze">Bronze Membership</label>
+                        </div>
+
+                        <div class="radio-group">
+                            <input type="radio" id="silver" name="membershipLevel" value="silver">
+                            <label for="silver">Silver Membership</label>
+                        </div>
+
+                        <div class="radio-group">
+                            <input type="radio" id="gold" name="membershipLevel" value="gold">
+                            <label for="gold">Gold Membership</label>
+                        </div>
+                    </div>
+
+                    <!-- Hidden timestamp field -->
+                    <input type="hidden" id="timestamp" name="timestamp">
+
+                    <!-- Submit Button -->
+                    <div class="form-group submit-group">
+                        <button type="submit" class="submit-btn">Submit Application</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="membership-section">
+                <h2>Membership Levels</h2>
+                <div class="membership-cards">
+                    <div class="membership-card" id="nonprofit-card">
+                        <h3>Non Profit Membership</h3>
+                        <p>Free membership for non-profit organizations</p>
+                        <button class="learn-more-btn" data-level="nonprofit">Learn More</button>
+                    </div>
+
+                    <div class="membership-card" id="bronze-card">
+                        <h3>Bronze Membership</h3>
+                        <p>$75 per year</p>
+                        <button class="learn-more-btn" data-level="bronze">Learn More</button>
+                    </div>
+
+                    <div class="membership-card" id="silver-card">
+                        <h3>Silver Membership</h3>
+                        <p>$180 per year</p>
+                        <button class="learn-more-btn" data-level="silver">Learn More</button>
+                    </div>
+
+                    <div class="membership-card" id="gold-card">
+                        <h3>Gold Membership</h3>
+                        <p>$350 per year</p>
+                        <button class="learn-more-btn" data-level="gold">Learn More</button>
+                    </div>
+                </div>
+            </section>
         </div>
-        <div class="footer-right">
-            <p>WDD231 Class Project</p>
-            <p>by Luis Eleazar Lizano Rojas</p>
-            <p>© 2025 Tarapoto Chamber of Commerce - Tarapoto, Peru</p>
-            <p>Last Modified: <span id="lastModifiedDate"></span></p>
+
+        <!-- Membership Details Modal -->
+        <div id="membership-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <div id="modal-details">
+                    <!-- Modal content will be populated by JavaScript -->
+                </div>
+            </div>
         </div>
-    </div>
-</footer>
+    </main>
+
+    <footer>
+        <!-- Footer container with max-width for alignment -->
+        <div class="footer-container">
+            <div class="footer-left">
+                <p><strong>Location:</strong> Tarapoto, Peru 999</p>
+                <p><strong>Address:</strong> Av Lamas 123</p>
+                <p><strong>Email:</strong> <a href="mailto:info@tarapotochamber.pe"
+                        aria-label="Send email to Tarapoto Chamber of Commerce">info@tarapotochamber.pe</a></p>
+                <p><strong>Phone:</strong> <a href="tel:+51-555-2300"
+                        aria-label="Call Tarapoto Chamber of Commerce">(+51)
+                        555-2300</a></p>
+                <p><strong>RUC:</strong> 123456789</p>
+            </div>
+            <div class="footer-center">
+                <a href="https://facebook.com" target="_blank" rel="noopener" class="social-icon"
+                    aria-label="Visit our Facebook page">
+                    <img src="images/icons/facebook.png" alt="Facebook" width="60" height="60" loading="lazy">
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-icon"
+                    aria-label="Visit our LinkedIn page">
+                    <img src="images/icons/linkedin.png" alt="LinkedIn" width="60" height="60" loading="lazy">
+                </a>
+                <a href="https://youtube.com" target="_blank" rel="noopener" class="social-icon"
+                    aria-label="Visit our YouTube channel">
+                    <img src="images/icons/youtube.png" alt="YouTube" width="60" height="60" loading="lazy">
+                </a>
+            </div>
+            <div class="footer-right">
+                <p>WDD231 Class Project</p>
+                <p>by Luis Eleazar Lizano Rojas</p>
+                <p>© 2025 Tarapoto Chamber of Commerce - Tarapoto, Peru</p>
+                <p>Last Modified: <span id="lastModifiedDate"></span></p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

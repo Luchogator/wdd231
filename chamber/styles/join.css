@@ -1,0 +1,478 @@
+/* ======================
+   JOIN PAGE STYLES
+====================== */
+
+/* Main Join Page Container */
+.join-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+/* Form Section Styles */
+.form-section {
+    flex: 1;
+    min-width: 300px;
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-section h2 {
+    margin-top: 0;
+    color: #2c3e50;
+    border-bottom: 2px solid #1a6aa8;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #34495e;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #767676;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #1a6aa8;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(26, 106, 168, 0.2);
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Radio button styles - corregido para alinear a la izquierda */
+.membership-radios p {
+    font-weight: bold;
+    margin-bottom: 12px;
+    color: #34495e;
+}
+
+.radio-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.radio-group input[type="radio"] {
+    width: auto;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.radio-group label {
+    display: inline;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+.submit-btn {
+    background-color: #0f5897;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.submit-btn:hover {
+    background-color: #0e4d84;
+}
+
+.required {
+    color: #d91e18;
+    margin-left: 5px;
+}
+
+/* Membership Section Styles */
+.membership-section {
+    flex: 1;
+    min-width: 300px;
+}
+
+.membership-section h2 {
+    color: #2c3e50;
+    border-bottom: 2px solid #1a6aa8;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Tarjetas de membresía con animaciones mejoradas */
+.membership-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+.membership-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    padding: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: none;
+    /* Se controlará por JS */
+}
+
+/* Aplica diferentes colores para cada tipo de membresía */
+#nonprofit-card {
+    border-left: 5px solid #27ae60;
+}
+
+#bronze-card {
+    border-left: 5px solid #cd7f32;
+}
+
+#silver-card {
+    border-left: 5px solid #808080;
+}
+
+#gold-card {
+    border-left: 5px solid #b8860b;
+}
+
+.membership-card h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #2c3e50;
+    font-size: 1.2rem;
+}
+
+.membership-card p {
+    color: #333333;
+    font-weight: 500;
+}
+
+.membership-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.learn-more-btn {
+    background-color: #0f5897;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.learn-more-btn:hover {
+    background-color: #0e4d84;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.modal.show {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: #fff;
+    border-radius: 8px;
+    margin: auto;
+    max-width: 600px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    padding: 30px;
+    position: relative;
+    transform: scale(0.8);
+    transition: transform 0.3s;
+}
+
+.modal.show .modal-content {
+    transform: scale(1);
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #4a4a4a;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-btn:hover {
+    color: #d91e18;
+}
+
+/* Estilos para el contenido del modal */
+#modal-details h3 {
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #1a6aa8;
+    padding-bottom: 10px;
+}
+
+#modal-details .price {
+    font-size: 1.4rem;
+    color: #0f5897;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#modal-details .description {
+    line-height: 1.6;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+#modal-details h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+#modal-details .benefits-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+
+#modal-details .benefits-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid #ecf0f1;
+    position: relative;
+    padding-left: 30px;
+    color: #333333;
+}
+
+#modal-details .benefits-list li:before {
+    content: "✓";
+    color: #27ae60;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .join-container {
+        flex-direction: column;
+    }
+
+    .membership-cards {
+        max-width: 100%;
+    }
+
+    .modal-content {
+        width: 95%;
+        padding: 20px;
+    }
+}
+
+/* Keyframes para las animaciones */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.8);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+/* Thank You Page Styles */
+.thankyou-container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.thankyou-content {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.thankyou-content.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.success-icon {
+    background-color: #27ae60;
+    color: white;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    font-size: 50px;
+    line-height: 80px;
+    margin: 0 auto 30px;
+}
+
+.details-box {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 30px 0;
+    text-align: left;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.details-box dl {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px;
+    margin: 0;
+}
+
+.details-box dt {
+    font-weight: bold;
+    color: #34495e;
+}
+
+.details-box dd {
+    margin: 0;
+    color: #2c3e50;
+}
+
+.next-steps {
+    background-color: #e6f7ff;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 30px 0;
+    border-left: 4px solid #0f5897;
+    text-align: left;
+    color: #333333;
+}
+
+.button-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.primary-btn,
+.secondary-btn {
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.primary-btn {
+    background-color: #0f5897;
+    color: white;
+}
+
+.primary-btn:hover {
+    background-color: #0e4d84;
+}
+
+.secondary-btn {
+    background-color: transparent;
+    color: #0f5897;
+    border: 2px solid #0f5897;
+}
+
+.secondary-btn:hover {
+    background-color: #0f5897;
+    color: white;
+}
+
+.loading {
+    color: #4a4a4a;
+    font-style: italic;
+}
+
+/* Responsive adjustments for Thank You page */
+@media (max-width: 600px) {
+    .thankyou-content {
+        padding: 20px;
+    }
+
+    .details-box dl {
+        grid-template-columns: 1fr;
+    }
+
+    .button-container {
+        flex-direction: column;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
