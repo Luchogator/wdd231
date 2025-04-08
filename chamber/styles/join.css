@@ -39,7 +39,7 @@
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
-    color: #34495e;
+    color: #1a1a1a;
 }
 
 .form-group input,
@@ -70,7 +70,7 @@
 .membership-radios p {
     font-weight: bold;
     margin-bottom: 12px;
-    color: #34495e;
+    color: #1a1a1a;
 }
 
 .radio-group {
@@ -92,7 +92,7 @@
 }
 
 .submit-btn {
-    background-color: #0f5897;
+    background-color: #074578;
     color: white;
     border: none;
     padding: 12px 24px;
@@ -106,12 +106,15 @@
 }
 
 .submit-btn:hover {
-    background-color: #0e4d84;
+    background-color: #053661;
 }
 
 .required {
-    color: #d91e18;
-    margin-left: 5px;
+    color: #9a0000;
+    margin-left: 8px;
+    font-weight: bold;
+    font-size: 1.2em;
+    line-height: 1;
 }
 
 /* Membership Section Styles */
@@ -169,13 +172,15 @@
 .membership-card h3 {
     margin-top: 0;
     margin-bottom: 15px;
-    color: #2c3e50;
+    color: #1a1a1a;
     font-size: 1.2rem;
+    font-weight: bold;
 }
 
 .membership-card p {
-    color: #333333;
+    color: #1a1a1a;
     font-weight: 500;
+    line-height: 1.5;
 }
 
 .membership-card:hover {
@@ -184,7 +189,7 @@
 }
 
 .learn-more-btn {
-    background-color: #0f5897;
+    background-color: #053661;
     color: white;
     border: none;
     padding: 8px 16px;
@@ -200,7 +205,7 @@
 }
 
 .learn-more-btn:hover {
-    background-color: #0e4d84;
+    background-color: #032440;
 }
 
 /* Modal Styles */
