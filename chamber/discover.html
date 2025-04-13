@@ -1,46 +1,55 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tarapoto Chamber of Commerce - Business Directory</title>
-  <meta name="description" content="Directory of businesses in the Tarapoto Chamber of Commerce">
+  <title>Tarapoto Chamber of Commerce - Discover</title>
+  <meta name="description" content="Discover Tarapoto - Explore the attractions and businesses in Tarapoto, Peru">
   <meta name="author" content="Luis Eleazar Lizano Rojas">
 
   <!-- Open Graph / Facebook Meta Tags -->
-  <meta property="og:title" content="Tarapoto Chamber of Commerce - Members Directory">
+  <meta property="og:title" content="Tarapoto Chamber of Commerce - Discover">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://luchogator.github.io/wdd231/chamber/images/logo-chamber.jpg">
-  <meta property="og:url" content="https://luchogator.github.io/wdd231/chamber/directory.html">
-  <meta property="og:description" content="Explore our members directory for the Tarapoto Chamber of Commerce">
+  <meta property="og:image" content="https://luchogator.github.io/wdd231/chamber/images/chamber-hero.jpg">
+  <meta property="og:url" content="https://luchogator.github.io/wdd231/chamber/discover.html">
+  <meta property="og:description"
+    content="Discover the attractions and businesses in Tarapoto, Peru - Business Hub of Tarapoto">
   <meta property="og:site_name" content="Tarapoto Chamber of Commerce">
-  <meta property="og:locale" content="es_PE">
+  <meta property="og:locale" content="en_US">
 
   <!-- Favicon -->
   <link rel="icon" href="images/favicon.ico">
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts with display=swap for better performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" media="print"
+    onload="this.media='all'">
+  <!-- Fallback for font loading -->
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  </noscript>
 
   <!-- Chamber CSS -->
   <link rel="stylesheet" href="styles/chamber.css">
+  <link rel="stylesheet" href="styles/discover.css">
 
   <!-- Scripts -->
   <script defer src="scripts/hamburger.js"></script>
   <script defer src="scripts/date.js"></script>
-  <script defer src="scripts/directory.js"></script>
+  <script defer src="scripts/discover.js"></script>
 </head>
 
 <body>
   <header>
     <div class="header-left">
       <div class="header-logo-title">
-        <img src="images/logo-chamber.jpg" alt="Chamber Logo" class="chamber-logo">
+        <!-- Optimized logo loading -->
+        <img src="images/logo-chamber.jpg" alt="Chamber Logo" class="chamber-logo" width="120" height="120"
+          fetchpriority="high">
         <div class="title-subtitle-container">
-          <h1 class="chamber-title">Tarapoto Chamber of Commerce</h1>
+          <h2 class="chamber-title">Tarapoto Chamber of Commerce</h2>
           <p class="subtitle">Business Hub of Tarapoto, Peru</p>
         </div>
       </div>
@@ -51,26 +60,42 @@
     </button>
   </header>
 
-  <nav id="chamber-nav">
+  <nav id="chamber-nav" aria-label="Main Navigation">
     <ul>
       <li><a href="index.html">Home</a></li>
-      <li><a href="directory.html" aria-current="page">Business Directory</a></li>
+      <li><a href="directory.html">Business Directory</a></li>
       <li><a href="join.html">Join</a></li>
-      <li><a href="discover.html">Discover</a></li>
+      <li><a href="discover.html" aria-current="page">Discover</a></li>
       <li><a href="#">About</a></li>
       <li><a href="#">Podcast</a></li>
       <li><a href="#">Events</a></li>
     </ul>
   </nav>
 
-  <main>
-    <h2>Our Members</h2>
-    <div class="view-controls">
-      <button id="grid-view" class="active">Grid View</button>
-      <button id="list-view">List View</button>
+  <main id="maincontent">
+    <h1>Discover Tarapoto</h1>
+    
+    <!-- Visit Message Section -->
+    <section class="visit-message" aria-labelledby="visit-heading">
+      <h2 id="visit-heading" class="visually-hidden">Visit Information</h2>
+      <div id="visit-info" class="visit-info">
+        <!-- This will be populated by JavaScript -->
+      </div>
+    </section>
+
+    <!-- Discover Content -->
+    <div class="discover-container">
+      <!-- Discover cards will be populated from JSON data -->
     </div>
-    <div id="member-container" class="grid-view">
-      <!-- Members will be loaded here by JavaScript -->
+    
+    <!-- Attraction Details Modal -->
+    <div id="attraction-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn" aria-label="Close modal">&times;</span>
+        <div id="modal-details">
+          <!-- Modal content will be populated by JavaScript -->
+        </div>
+      </div>
     </div>
   </main>
 
@@ -80,7 +105,7 @@
       <div class="footer-left">
         <p><strong>Location:</strong> Tarapoto, Peru 999</p>
         <p><strong>Address:</strong> Av Lamas 123</p>
-        <p><strong>Email:</strong> <a href="mailto:info@tarapotochamber.pe"
+        <p><strong>Email:</strong> <a href="info@tarapotochamber.pe"
             aria-label="Send email to Tarapoto Chamber of Commerce">info@tarapotochamber.pe</a></p>
         <p><strong>Phone:</strong> <a href="tel:+51-555-2300" aria-label="Call Tarapoto Chamber of Commerce">(+51)
             555-2300</a></p>

@@ -1,0 +1,108 @@
+{
+  "attractions": [
+    {
+      "id": 1,
+      "name": "Laguna Azul",
+      "address": "Sauce District, Tarapoto, San Martin",
+      "description": "A beautiful crystal-clear lagoon surrounded by lush vegetation. Ideal for swimming, boating, and enjoying local cuisine on its shores.",
+      "image": "laguna-azul.webp",
+      "details": {
+        "hours": "Open daily from 8:00 AM to 6:00 PM",
+        "price": "Entrance fee: S/. 10 (Peruvian Soles) per person",
+        "activities": ["Swimming", "Boating", "Fishing", "Dining"],
+        "tips": "Bring sunscreen, swimwear, and cash for local food vendors. Weekdays are less crowded than weekends."
+      }
+    },
+    {
+      "id": 2,
+      "name": "Ahuashiyacu Waterfall",
+      "address": "Km. 14 of Tarapoto - Yurimaguas Highway",
+      "description": "An impressive 40-meter high waterfall located in the middle of the jungle. A refreshing destination to escape the tropical heat.",
+      "image": "ahuashiyacu.webp",
+      "details": {
+        "hours": "Open daily from 8:00 AM to 5:00 PM",
+        "price": "Entrance fee: S/. 15 (Peruvian Soles) per person",
+        "activities": ["Swimming", "Hiking", "Photography", "Nature observation"],
+        "tips": "The trail can be slippery during rainy season. Wear appropriate footwear and bring a change of clothes if you plan to swim."
+      }
+    },
+    {
+      "id": 3,
+      "name": "Urku Amazonian Studies",
+      "address": "Jr. Angel Delgado Morey 435, Tarapoto",
+      "description": "Cultural center that promotes Amazonian art and traditions. Offers exhibitions, workshops, and sales of local handicrafts.",
+      "image": "urku.webp",
+      "details": {
+        "hours": "Monday to Saturday: 9:00 AM to 5:00 PM, Closed on Sundays",
+        "price": "Entrance fee: S/. 8 (Peruvian Soles) per person, Workshops: S/. 20-50 (Peruvian Soles)",
+        "activities": ["Art exhibitions", "Cultural workshops", "Handicraft shopping", "Cultural presentations"],
+        "tips": "Check their schedule for special events and workshops. Many handicrafts make excellent souvenirs."
+      }
+    },
+    {
+      "id": 4,
+      "name": "Cordillera Escalera Reserve",
+      "address": "10 km from Tarapoto, San Martin",
+      "description": "Protected area with rich biodiversity. Home to numerous species of birds, mammals, and endemic plants of the region.",
+      "image": "cordillera-escalera.webp",
+      "details": {
+        "hours": "Tours available from 6:00 AM to 3:00 PM",
+        "price": "Guide services: S/. 80-150 (Peruvian Soles) depending on tour length",
+        "activities": ["Hiking", "Birdwatching", "Wildlife spotting", "Photography"],
+        "tips": "Hiring a local guide is highly recommended. Early morning tours offer the best wildlife viewing opportunities."
+      }
+    },
+    {
+      "id": 5,
+      "name": "Plaza de Armas of Tarapoto",
+      "address": "City Center, Tarapoto",
+      "description": "The heart of the city where locals and tourists gather. Surrounded by restaurants, shops, and historic buildings.",
+      "image": "plaza-armas.webp",
+      "details": {
+        "hours": "Open 24 hours",
+        "price": "Free",
+        "activities": ["People watching", "Shopping", "Dining", "Photography"],
+        "tips": "Visit in the evening when locals come out to socialize. The area is well-lit and safe for evening strolls."
+      }
+    },
+    {
+      "id": 6,
+      "name": "Chanka Museum",
+      "address": "Jr. San Martin 154, Tarapoto",
+      "description": "Museum exhibiting artifacts and art from indigenous cultures of the Amazon region, including ceramics, textiles, and traditional tools.",
+      "image": "museo-chanka.webp",
+      "details": {
+        "hours": "Tuesday to Sunday: 9:00 AM to 4:00 PM, Closed on Mondays",
+        "price": "Entrance fee: S/. 5 (Peruvian Soles) per person",
+        "activities": ["Guided tours", "Cultural exhibitions", "Archaeological displays"],
+        "tips": "Guided tours are available in Spanish and sometimes in English. Photography may be restricted in certain areas."
+      }
+    },
+    {
+      "id": 7,
+      "name": "San Mateo Hot Springs",
+      "address": "Moyobamba District, 2 hours from Tarapoto",
+      "description": "Natural hot springs with medicinal properties, surrounded by lush tropical vegetation. A perfect place to relax.",
+      "image": "banos-termales.webp",
+      "details": {
+        "hours": "Open daily from 7:00 AM to 9:00 PM",
+        "price": "Entrance fee: S/. 12 (Peruvian Soles) per person",
+        "activities": ["Thermal baths", "Relaxation", "Nature walks", "Spa treatments"],
+        "tips": "Bring a towel and change of clothes. The springs are less crowded early in the morning and on weekdays."
+      }
+    },
+    {
+      "id": 8,
+      "name": "Tarapoto Market",
+      "address": "Jr. Jimenez Pimentel, Tarapoto",
+      "description": "Colorful local market where you can find regional products, exotic fruits, handicrafts, and authentic Amazonian cuisine.",
+      "image": "mercado.webp",
+      "details": {
+        "hours": "Monday to Saturday: 6:00 AM to 6:00 PM, Sunday: 6:00 AM to 2:00 PM",
+        "price": "Free entrance",
+        "activities": ["Shopping", "Food tasting", "Cultural immersion", "Photography"],
+        "tips": "Best visited in the morning when produce is freshest. Try local fruits like camu camu, cocona, and aguaje. Bargaining is expected for non-food items."
+      }
+    }
+  ]
+}
