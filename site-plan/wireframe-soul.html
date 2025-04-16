@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create from the Soul Wireframe - Brain, Body, and Code</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 20px;
+    }
+    .wireframe {
+      background-color: white;
+      border: 1px solid #ccc;
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .header {
+      border: 2px solid #333;
+      height: 80px;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+    .logo {
+      width: 60px;
+      height: 60px;
+      background-color: #ddd;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+    }
+    .site-name {
+      flex-grow: 1;
+      margin-left: 20px;
+    }
+    .nav {
+      border: 2px solid #333;
+      height: 50px;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    .nav-item {
+      padding: 5px 15px;
+      background-color: #eee;
+    }
+    .hero {
+      border: 2px solid #333;
+      height: 200px;
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      background-color: #f7f0f7; /* Light purple tint for Soul section */
+    }
+    .section-title {
+      text-align: center;
+      margin: 30px 0 20px;
+      font-size: 24px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 10px;
+    }
+    .gallery-nav {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+    .gallery-tab {
+      padding: 8px 15px;
+      background-color: #eee;
+      border: 1px solid #ddd;
+    }
+    .gallery-tab.active {
+      background-color: #ddd;
+      border-bottom: 3px solid #333;
+    }
+    .gallery-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+    .gallery-item {
+      border: 2px solid #333;
+      height: 150px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f5f5f5;
+    }
+    .inspiration-container {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+    }
+    .inspiration-card {
+      width: 30%;
+      border: 2px solid #333;
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .inspiration-image {
+      width: 100%;
+      height: 100px;
+      background-color: #ddd;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .radio-story {
+      border: 2px solid #333;
+      padding: 20px;
+      margin: 30px 0;
+      display: flex;
+      gap: 20px;
+    }
+    .radio-image {
+      width: 40%;
+      background-color: #ddd;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 200px;
+    }
+    .radio-content {
+      width: 60%;
+    }
+    .play-button {
+      background-color: #ddd;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 15px;
+      cursor: pointer;
+    }
+    .modal {
+      border: 2px dashed #333;
+      padding: 20px;
+      margin: 20px 0;
+      position: relative;
+    }
+    .modal-title {
+      text-align: center;
+      margin-bottom: 15px;
+      font-size: 20px;
+    }
+    .close-button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 30px;
+      height: 30px;
+      background-color: #ddd;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+    }
+    .footer {
+      border: 2px solid #333;
+      height: 100px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+    .social-links {
+      display: flex;
+      gap: 10px;
+    }
+    .social-icon {
+      width: 30px;
+      height: 30px;
+      background-color: #ddd;
+      border-radius: 50%;
+    }
+    .wireframe-title {
+      text-align: center;
+      margin-bottom: 20px;
+      font-weight: bold;
+      font-size: 24px;
+    }
+    .text-placeholder {
+      background-color: #eee;
+      height: 10px;
+      margin: 10px 0;
+    }
+    .text-placeholder.short {
+      width: 60%;
+    }
+    .text-placeholder.medium {
+      width: 80%;
+    }
+    .text-placeholder.long {
+      width: 100%;
+    }
+    .list-placeholder {
+      margin: 15px 0 15px 20px;
+    }
+    .list-item {
+      background-color: #eee;
+      height: 8px;
+      margin: 8px 0;
+      width: 90%;
+    }
+    .print-button {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    @media print {
+      body {
+        background-color: white;
+        padding: 0;
+      }
+      .print-button {
+        display: none;
+      }
+      .wireframe {
+        box-shadow: none;
+        border: 1px solid #000;
+      }
+    }
+  </style>
+</head>
+<body>
+  <button class="print-button" onclick="window.print()">Print Wireframe</button>
+  
+  <div class="wireframe">
+    <div class="wireframe-title">Create from the Soul Page Wireframe</div>
+    
+    <div class="header">
+      <div class="logo">Logo</div>
+      <div class="site-name">
+        <div class="text-placeholder medium"></div>
+        <div class="text-placeholder short"></div>
+      </div>
+      <div>Menu</div>
+    </div>
+    
+    <div class="nav">
+      <div class="nav-item">Home</div>
+      <div class="nav-item">Feed Your Mind</div>
+      <div class="nav-item">Connect with Your Code</div>
+      <div class="nav-item">Create from the Soul</div>
+    </div>
+    
+    <div class="hero">
+      <h1>Create from the Soul</h1>
+      <div class="text-placeholder long"></div>
+      <div class="text-placeholder medium"></div>
+    </div>
+    
+    <div class="section-title">My Creative Gallery</div>
+    <div class="text-placeholder long"></div>
+    
+    <div class="gallery-nav">
+      <div class="gallery-tab active">All Works</div>
+      <div class="gallery-tab">Drawings</div>
+      <div class="gallery-tab">Music</div>
+      <div class="gallery-tab">Restorations</div>
+    </div>
+    
+    <div class="gallery-container">
+      <div class="gallery-item">Gallery Item 1</div>
+      <div class="gallery-item">Gallery Item 2</div>
+      <div class="gallery-item">Gallery Item 3</div>
+      <div class="gallery-item">Gallery Item 4</div>
+      <div class="gallery-item">Gallery Item 5</div>
+      <div class="gallery-item">Gallery Item 6</div>
+    </div>
+    
+    <div class="section-title">What Inspires Me</div>
+    <div class="inspiration-container">
+      <div class="inspiration-card">
+        <div class="inspiration-image">Image</div>
+        <h3>Nature's Patterns</h3>
+        <div class="text-placeholder medium"></div>
+        <div class="text-placeholder long"></div>
+      </div>
+      <div class="inspiration-card">
+        <div class="inspiration-image">Image</div>
+        <h3>Musical Rhythms</h3>
+        <div class="text-placeholder medium"></div>
+        <div class="text-placeholder long"></div>
+      </div>
+      <div class="inspiration-card">
+        <div class="inspiration-image">Image</div>
+        <h3>Family Heritage</h3>
+        <div class="text-placeholder medium"></div>
+        <div class="text-placeholder long"></div>
+      </div>
+    </div>
+    
+    <div class="section-title">My Grandmother's Philips Radio</div>
+    <div class="radio-story">
+      <div class="radio-image">Radio Image</div>
+      <div class="radio-content">
+        <div class="text-placeholder long"></div>
+        <div class="text-placeholder long"></div>
+        
+        <h3>The Restoration Process</h3>
+        <div class="list-placeholder">
+          <div class="list-item"></div>
+          <div class="list-item"></div>
+          <div class="list-item"></div>
+          <div class="list-item"></div>
+          <div class="list-item"></div>
+        </div>
+        
+        <div class="text-placeholder long"></div>
+        <div class="text-placeholder medium"></div>
+        
+        <button class="play-button">Listen to the Radio</button>
+      </div>
+    </div>
+    
+    <div class="modal">
+      <div class="close-button">X</div>
+      <div class="modal-title">Gallery Item Details</div>
+      <div style="height: 200px; background-color: #ddd; margin: 15px 0; display: flex; justify-content: center; align-items: center;">
+        Artwork Image
+      </div>
+      <h3>Artwork Title</h3>
+      <div class="text-placeholder medium"></div>
+      <div class="text-placeholder long"></div>
+      <div class="text-placeholder long"></div>
+      <div class="text-placeholder medium"></div>
+    </div>
+    
+    <div class="footer">
+      <div>
+        <div class="text-placeholder medium"></div>
+        <div class="text-placeholder short"></div>
+      </div>
+      <div class="social-links">
+        <div class="social-icon"></div>
+        <div class="social-icon"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

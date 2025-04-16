@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feed Your Mind - Brain, Body, and Code</title>
+  <meta name="description" content="Wellness tips, nutrition for brain health, and productivity suggestions for a longer, more conscious life.">
+  <meta name="author" content="Luis Eleazar Lizano Rojas">
+
+  <!-- Open Graph / Facebook Meta Tags -->
+  <meta property="og:title" content="Feed Your Mind - Brain, Body, and Code">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://luchogator.github.io/wdd231/bbc/images/logo-bbc.jpg">
+  <meta property="og:url" content="https://luchogator.github.io/wdd231/bbc/mind.html">
+  <meta property="og:description" content="Wellness tips, nutrition for brain health, and productivity suggestions for a longer, more conscious life.">
+  <meta property="og:site_name" content="Brain, Body, and Code">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/mind.css">
+
+  <!-- Scripts -->
+  <script defer src="scripts/main.js"></script>
+  <script defer src="scripts/date.js"></script>
+  <script defer src="scripts/mind.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-content">
+      <div class="logo-container">
+        <img src="images/logo-bbc.png" alt="Brain, Body, and Code Logo" class="logo">
+        <div class="site-name">
+          <h1>Brain, Body, and Code</h1>
+          <p class="tagline">Wellness • Development • Creativity</p>
+        </div>
+      </div>
+      <button id="hamburger-btn" aria-label="Toggle Menu">
+        <span>&#9776;</span>
+      </button>
+    </div>
+    <nav>
+      <ul id="primary-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="mind.html" class="active">Feed Your Mind</a></li>
+        <li><a href="code.html">Connect with Your Code</a></li>
+        <li><a href="soul.html">Create from the Soul</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero mind-hero">
+      <div class="hero-content">
+        <h2>Feed Your Mind</h2>
+        <p>Wellness tips, nutrition for brain health, and productivity suggestions for a longer, more conscious life.</p>
+      </div>
+    </section>
+
+    <section class="wellness-tips">
+      <h2>Brain Health Essentials</h2>
+      <div class="tips-container">
+        <article class="tip-card">
+          <img src="images/nutrition-icon.png" alt="Nutrition Icon">
+          <h3>Nutrition for Developers</h3>
+          <p>Foods that boost cognitive function, improve focus, and help maintain energy levels during long coding sessions.</p>
+          <ul>
+            <li>Blueberries and dark berries</li>
+            <li>Fatty fish rich in omega-3s</li>
+            <li>Dark chocolate (70%+ cocoa)</li>
+            <li>Nuts and seeds</li>
+            <li>Green leafy vegetables</li>
+          </ul>
+        </article>
+
+        <article class="tip-card">
+          <img src="images/productivity-icon.png" alt="Productivity Icon">
+          <h3>Productivity Habits</h3>
+          <p>Techniques to maintain focus and productivity while avoiding burnout.</p>
+          <ul>
+            <li>Pomodoro Technique (25/5 minute intervals)</li>
+            <li>Morning routine optimization</li>
+            <li>Strategic breaks and movement</li>
+            <li>Mindfulness and meditation</li>
+            <li>Proper workspace ergonomics</li>
+          </ul>
+        </article>
+
+        <article class="tip-card">
+          <img src="images/sleep-icon.png" alt="Sleep Icon">
+          <h3>Sleep Optimization</h3>
+          <p>How quality sleep impacts cognitive function and creativity.</p>
+          <ul>
+            <li>Consistent sleep schedule</li>
+            <li>Blue light reduction before bed</li>
+            <li>Sleep environment optimization</li>
+            <li>Pre-sleep relaxation techniques</li>
+            <li>Tracking sleep quality</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="snack-plan">
+      <h2>Personalized Snack Plan for Programmers</h2>
+      <p>Create your customized healthy snack plan to fuel your coding sessions.</p>
+      
+      <form id="snack-form" class="snack-form">
+        <div class="form-group">
+          <label for="name">Your Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="coding-hours">Average Daily Coding Hours:</label>
+          <input type="number" id="coding-hours" name="coding-hours" min="1" max="16" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="dietary-preference">Dietary Preference:</label>
+          <select id="dietary-preference" name="dietary-preference" required>
+            <option value="">Select an option</option>
+            <option value="omnivore">Omnivore</option>
+            <option value="vegetarian">Vegetarian</option>
+            <option value="vegan">Vegan</option>
+            <option value="keto">Keto</option>
+            <option value="paleo">Paleo</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label>Energy Level Goals:</label>
+          <div class="checkbox-group">
+            <input type="checkbox" id="sustained-energy" name="energy-goals" value="sustained-energy">
+            <label for="sustained-energy">Sustained Energy</label>
+            
+            <input type="checkbox" id="mental-clarity" name="energy-goals" value="mental-clarity">
+            <label for="mental-clarity">Mental Clarity</label>
+            
+            <input type="checkbox" id="focus-improvement" name="energy-goals" value="focus-improvement">
+            <label for="focus-improvement">Focus Improvement</label>
+            
+            <input type="checkbox" id="stress-reduction" name="energy-goals" value="stress-reduction">
+            <label for="stress-reduction">Stress Reduction</label>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label>Snack Preferences:</label>
+          <div class="checkbox-group">
+            <input type="checkbox" id="sweet" name="snack-preferences" value="sweet">
+            <label for="sweet">Sweet</label>
+            
+            <input type="checkbox" id="savory" name="snack-preferences" value="savory">
+            <label for="savory">Savory</label>
+            
+            <input type="checkbox" id="crunchy" name="snack-preferences" value="crunchy">
+            <label for="crunchy">Crunchy</label>
+            
+            <input type="checkbox" id="soft" name="snack-preferences" value="soft">
+            <label for="soft">Soft</label>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="allergies">Allergies or Foods to Avoid:</label>
+          <textarea id="allergies" name="allergies" rows="3"></textarea>
+        </div>
+        
+        <div class="form-buttons">
+          <button type="submit" class="btn primary-btn">Generate Snack Plan</button>
+          <button type="reset" class="btn secondary-btn">Reset Form</button>
+        </div>
+      </form>
+      
+      <div id="snack-plan-result" class="snack-plan-result hidden">
+        <!-- Results will be populated by JavaScript -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-info">
+        <p>&copy; <span id="current-year"></span> Luis Eleazar Lizano Rojas | WDD231 Class Project</p>
+        <p>Last Modified: <span id="last-modified"></span></p>
+      </div>
+      <div class="social-links">
+        <a href="https://github.com/luchogator" target="_blank" aria-label="GitHub Profile">
+          <img src="images/github-icon.png" alt="GitHub">
+        </a>
+        <a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn Profile">
+          <img src="images/linkedin-icon.png" alt="LinkedIn">
+        </a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

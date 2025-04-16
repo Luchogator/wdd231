@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site Plan: Brain, Body, and Code</title>
+  <meta name="description" content="Site plan for the Brain, Body, and Code personal website project">
+  <meta name="author" content="Luis Eleazar Lizano Rojas">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      /* Color Palette */
+      --primary-blue: #2c6e9b;
+      --primary-green: #4a8f6c;
+      --primary-purple: #6b4a8f;
+      --dark-gray: #333333;
+      --medium-gray: #666666;
+      --light-gray: #f5f5f5;
+      --white: #ffffff;
+      
+      /* Typography */
+      --heading-font: 'Montserrat', sans-serif;
+      --body-font: 'Open Sans', sans-serif;
+      
+      /* Spacing */
+      --spacing-sm: 0.5rem;
+      --spacing-md: 1rem;
+      --spacing-lg: 2rem;
+      --spacing-xl: 3rem;
+    }
+    
+    * {
+      box-sizing: border-box;
+    }
+    
+    html {
+      font-size: 16px;
+    }
+    
+    body {
+      font-family: var(--body-font);
+      line-height: 1.6;
+      color: var(--dark-gray);
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: var(--spacing-md);
+      background-color: var(--white);
+    }
+    
+    header, footer {
+      background-color: var(--primary-blue);
+      color: var(--white);
+      padding: var(--spacing-lg);
+      text-align: center;
+      margin-bottom: var(--spacing-lg);
+    }
+    
+    footer {
+      margin-top: var(--spacing-xl);
+      margin-bottom: 0;
+    }
+    
+    h1, h2, h3, h4 {
+      font-family: var(--heading-font);
+      line-height: 1.2;
+    }
+    
+    h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+    
+    h2 {
+      font-size: 1.8rem;
+      border-bottom: 2px solid var(--primary-blue);
+      padding-bottom: var(--spacing-sm);
+      margin-top: var(--spacing-xl);
+    }
+    
+    h3 {
+      font-size: 1.3rem;
+      color: var(--primary-blue);
+    }
+    
+    p {
+      margin-bottom: var(--spacing-md);
+    }
+    
+    .subtitle {
+      font-style: italic;
+      margin-top: var(--spacing-sm);
+    }
+    
+    section {
+      margin-bottom: var(--spacing-xl);
+    }
+    
+    .color-palette {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--spacing-md);
+      margin: var(--spacing-lg) 0;
+    }
+    
+    .color-sample {
+      width: 200px;
+      height: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    .color-name {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: var(--spacing-sm) var(--spacing-md);
+      border-radius: 3px;
+      margin-top: var(--spacing-sm);
+      font-family: var(--heading-font);
+      font-weight: bold;
+    }
+    
+    .typography-sample {
+      margin: var(--spacing-lg) 0;
+      padding: var(--spacing-md);
+      border: 1px solid var(--medium-gray);
+      border-radius: 5px;
+    }
+    
+    .font-montserrat {
+      font-family: var(--heading-font);
+    }
+    
+    .font-opensans {
+      font-family: var(--body-font);
+    }
+    
+    .wireframes-container {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      margin: 30px 0;
+    }
+    
+    .wireframe {
+      margin-bottom: var(--spacing-lg);
+      text-align: center;
+    }
+    
+    .wireframe img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid var(--medium-gray);
+      border-radius: 5px;
+    }
+    
+    .scenario {
+      background-color: var(--light-gray);
+      padding: var(--spacing-md);
+      border-radius: 5px;
+      margin-bottom: var(--spacing-md);
+    }
+    
+    .scenario h3 {
+      margin-top: 0;
+    }
+    
+    .scenario-question {
+      font-weight: bold;
+      color: var(--primary-purple);
+    }
+    
+    .scenario-answer {
+      margin-top: var(--spacing-sm);
+    }
+    
+    @media screen and (max-width: 600px) {
+      html {
+        font-size: 14px;
+      }
+      
+      .color-palette {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Site Plan: Brain, Body, and Code</h1>
+    <p class="subtitle">WDD 231 - Web Frontend Development I</p>
+    <p>Luis Eleazar Lizano Rojas</p>
+  </header>
+  
+  <main>
+    <section id="site-name">
+      <h2>1. Site Name</h2>
+      <p>The site name is <strong>Brain, Body, and Code</strong>, which reflects the three main areas of focus: mental wellness, physical health, and programming skills. This name was chosen because it effectively communicates the holistic approach to development that I want to share with visitors.</p>
+    </section>
+    
+    <section id="site-purpose">
+      <h2>2. Site Purpose</h2>
+      <p>The purpose of this website is to create a personal space that brings together three key areas of my life:</p>
+      <ol>
+        <li><strong>Physical and mental well-being</strong> - Sharing nutrition tips, productivity habits, and wellness practices that support a healthy developer lifestyle.</li>
+        <li><strong>Professional development in software</strong> - Showcasing my projects, resources, and code snippets that might be helpful to others on their coding journey.</li>
+        <li><strong>Creative expression</strong> - Displaying my artistic endeavors including drawings, music experiments, and restored family artifacts that inspire my work.</li>
+      </ol>
+      <p>This site will serve as both a portfolio of my work and a resource for others interested in maintaining balance between technical skills, physical health, and creative pursuits.</p>
+    </section>
+    
+    <section id="scenarios">
+      <h2>3. Scenarios</h2>
+      <p>The following scenarios represent questions that might be asked by visitors to the site:</p>
+      
+      <div class="scenario">
+        <h3>Scenario 1: Developer Looking for Wellness Tips</h3>
+        <p class="scenario-question">"I spend long hours coding and often feel mentally drained. What foods or habits could help me maintain focus and energy throughout the day?"</p>
+        <p class="scenario-answer">This visitor would find value in the "Feed Your Mind" section, which offers nutrition recommendations specifically for developers, productivity techniques like the Pomodoro method, and a form to create a personalized healthy snack plan based on their specific needs and preferences.</p>
+      </div>
+      
+      <div class="scenario">
+        <h3>Scenario 2: Student Looking for Code Examples</h3>
+        <p class="scenario-question">"Where can I find practical code snippets for common web development tasks that I can adapt for my own projects?"</p>
+        <p class="scenario-answer">This visitor would benefit from the "Connect with Your Code" section, which includes reusable code snippets for responsive layouts, API fetching with async/await, and local storage implementation, along with explanations of how and when to use them.</p>
+      </div>
+      
+      <div class="scenario">
+        <h3>Scenario 3: Person Interested in Creative Restoration</h3>
+        <p class="scenario-question">"How did you restore that vintage Philips radio, and what inspired you to take on that project?"</p>
+        <p class="scenario-answer">This visitor would find their answer in the "Create from the Soul" section, which details the restoration process of my grandmother's radio, including the techniques used, challenges faced, and how this project connects to my approach to software development.</p>
+      </div>
+    </section>
+    
+    <section id="color-scheme">
+      <h2>4. Color Scheme</h2>
+      <p>The color scheme for this website is designed to create a calm, professional atmosphere while also incorporating colors that represent each of the three main sections:</p>
+      
+      <div class="color-palette">
+        <div class="color-sample" style="background-color: #2c6e9b;">
+          <div class="color-name">Primary Blue<br>#2c6e9b</div>
+        </div>
+        <div class="color-sample" style="background-color: #4a8f6c;">
+          <div class="color-name">Primary Green<br>#4a8f6c</div>
+        </div>
+        <div class="color-sample" style="background-color: #6b4a8f;">
+          <div class="color-name">Primary Purple<br>#6b4a8f</div>
+        </div>
+        <div class="color-sample" style="background-color: #333333;">
+          <div class="color-name">Dark Gray<br>#333333</div>
+        </div>
+        <div class="color-sample" style="background-color: #f5f5f5;">
+          <div class="color-name" style="color: #333;">Light Gray<br>#f5f5f5</div>
+        </div>
+      </div>
+      
+      <h3>Color Usage</h3>
+      <ul>
+        <li><strong>Primary Blue (#2c6e9b)</strong> - Used for the header, footer, and primary buttons. Represents the "Code" aspect of the site.</li>
+        <li><strong>Primary Green (#4a8f6c)</strong> - Used for accents on the "Feed Your Mind" page and secondary interactive elements. Represents the "Body" aspect.</li>
+        <li><strong>Primary Purple (#6b4a8f)</strong> - Used for accents on the "Create from the Soul" page and tertiary interactive elements. Represents the "Brain" aspect.</li>
+        <li><strong>Dark Gray (#333333)</strong> - Used for main text content and footer background.</li>
+        <li><strong>Light Gray (#f5f5f5)</strong> - Used for section backgrounds and card backgrounds.</li>
+      </ul>
+    </section>
+    
+    <section id="typography">
+      <h2>5. Typography</h2>
+      <p>The typography for this website uses a combination of two Google Fonts that complement each other while maintaining readability and professionalism:</p>
+      
+      <div class="typography-sample">
+        <h3>Heading Font: Montserrat</h3>
+        <p class="font-montserrat" style="font-size: 2rem; font-weight: 700;">Montserrat Bold (700)</p>
+        <p class="font-montserrat" style="font-size: 1.5rem; font-weight: 400;">Montserrat Regular (400)</p>
+        <p>Montserrat will be used for all headings (h1-h6), navigation items, and buttons. Its clean, modern appearance provides good contrast with the body text and works well for section titles and interactive elements.</p>
+      </div>
+      
+      <div class="typography-sample">
+        <h3>Body Font: Open Sans</h3>
+        <p class="font-opensans" style="font-size: 1rem; font-weight: 400;">Open Sans Regular (400) - Main body text</p>
+        <p class="font-opensans" style="font-size: 1rem; font-weight: 600;">Open Sans Semi-Bold (600) - Emphasis and important points</p>
+        <p>Open Sans will be used for all body text, paragraphs, and smaller UI elements. Its excellent readability across screen sizes and devices makes it ideal for longer content sections.</p>
+      </div>
+    </section>
+    
+    <section id="wireframe">
+      <h2>6. Wireframe</h2>
+      <p>Below are wireframes for the main pages of the Brain, Body, and Code website. These wireframes show the layout for desktop view. The mobile view will stack all elements vertically.</p>
+      
+      <div class="wireframes-container">
+        <!-- Home Page Wireframe -->
+        <div class="wireframe">
+          <h3 style="text-align: center; margin-bottom: 15px;">Home Page Wireframe</h3>
+          <img src="home-wireframe.png" alt="Wireframe for Brain, Body, and Code homepage" style="max-width: 100%; height: auto; border: 1px solid #ccc; display: block; margin: 0 auto;">
+        </div>
+        
+        <!-- Feed Your Mind Wireframe -->
+        <div class="wireframe">
+          <h3 style="text-align: center; margin-bottom: 15px;">Feed Your Mind Page Wireframe</h3>
+          <img src="feed-wireframe.png" alt="Wireframe for Feed Your Mind page" style="max-width: 100%; height: auto; border: 1px solid #ccc; display: block; margin: 0 auto;">
+        </div>
+        
+        <!-- Connect with Your Code Wireframe -->
+        <div class="wireframe">
+          <h3 style="text-align: center; margin-bottom: 15px;">Connect with Your Code Page Wireframe</h3>
+          <img src="code-wireframe.png" alt="Wireframe for Connect with Your Code page" style="max-width: 100%; height: auto; border: 1px solid #ccc; display: block; margin: 0 auto;">
+        </div>
+        
+        <!-- Create from the Soul Wireframe -->
+        <div class="wireframe">
+          <h3 style="text-align: center; margin-bottom: 15px;">Create from the Soul Page Wireframe</h3>
+          <img src="create-wireframe.png" alt="Wireframe for Create from the Soul page" style="max-width: 100%; height: auto; border: 1px solid #ccc; display: block; margin: 0 auto;">
+        </div>
+      </div>
+      
+      <p>The wireframes illustrate:</p>
+      <ul>
+        <li>Consistent header with logo, site name, and navigation across all pages</li>
+        <li>Hero section on each page with relevant heading and description</li>
+        <li>Specialized content sections for each area of focus</li>
+        <li>Interactive elements like forms, galleries, and code snippets</li>
+        <li>Modal windows for detailed content viewing</li>
+        <li>Consistent footer with copyright information and social links</li>
+      </ul>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2025 Luis Eleazar Lizano Rojas | WDD231 - Web Frontend Development I</p>
+    <p>Last Updated: April 16, 2025</p>
+  </footer>
+</body>
+</html>

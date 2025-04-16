@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create from the Soul - Brain, Body, and Code</title>
+  <meta name="description" content="Drawings, music experiments, and restored memories that inspire me to keep building and learning.">
+  <meta name="author" content="Luis Eleazar Lizano Rojas">
+
+  <!-- Open Graph / Facebook Meta Tags -->
+  <meta property="og:title" content="Create from the Soul - Brain, Body, and Code">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://luchogator.github.io/wdd231/bbc/images/logo-bbc.jpg">
+  <meta property="og:url" content="https://luchogator.github.io/wdd231/bbc/soul.html">
+  <meta property="og:description" content="Drawings, music experiments, and restored memories that inspire me to keep building and learning.">
+  <meta property="og:site_name" content="Brain, Body, and Code">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/soul.css">
+
+  <!-- Scripts -->
+  <script defer src="scripts/main.js"></script>
+  <script defer src="scripts/date.js"></script>
+  <script defer src="scripts/soul.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-content">
+      <div class="logo-container">
+        <img src="images/logo-bbc.png" alt="Brain, Body, and Code Logo" class="logo">
+        <div class="site-name">
+          <h1>Brain, Body, and Code</h1>
+          <p class="tagline">Wellness • Development • Creativity</p>
+        </div>
+      </div>
+      <button id="hamburger-btn" aria-label="Toggle Menu">
+        <span>&#9776;</span>
+      </button>
+    </div>
+    <nav>
+      <ul id="primary-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="mind.html">Feed Your Mind</a></li>
+        <li><a href="code.html">Connect with Your Code</a></li>
+        <li><a href="soul.html" class="active">Create from the Soul</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero soul-hero">
+      <div class="hero-content">
+        <h2>Create from the Soul</h2>
+        <p>Drawings, music experiments, and restored memories that inspire me to keep building and learning.</p>
+      </div>
+    </section>
+
+    <section class="creative-works">
+      <h2>My Creative Gallery</h2>
+      <p>A collection of my artistic endeavors across different mediums.</p>
+      
+      <div class="gallery-nav">
+        <button class="gallery-tab active" data-category="all">All Works</button>
+        <button class="gallery-tab" data-category="drawings">Drawings</button>
+        <button class="gallery-tab" data-category="music">Music</button>
+        <button class="gallery-tab" data-category="restorations">Restorations</button>
+      </div>
+      
+      <div class="gallery-container">
+        <!-- Gallery items will be loaded from JSON data -->
+      </div>
+    </section>
+
+    <section class="inspiration">
+      <h2>What Inspires Me</h2>
+      <div class="inspiration-container">
+        <div class="inspiration-card">
+          <img src="images/nature-inspiration.jpg" alt="Nature Inspiration">
+          <h3>Nature's Patterns</h3>
+          <p>The mathematical precision of natural forms—from the Fibonacci sequence in flower petals to the fractal patterns of coastlines—reminds me that beauty and logic are intertwined.</p>
+        </div>
+        
+        <div class="inspiration-card">
+          <img src="images/music-inspiration.jpg" alt="Music Inspiration">
+          <h3>Musical Rhythms</h3>
+          <p>The structure and flow of music, particularly in classical compositions and electronic music, influences how I think about code architecture and user experience design.</p>
+        </div>
+        
+        <div class="inspiration-card">
+          <img src="images/family-inspiration.jpg" alt="Family Inspiration">
+          <h3>Family Heritage</h3>
+          <p>Restoring and preserving family artifacts connects me to previous generations and reminds me that creating things that last requires both technical skill and emotional investment.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="philips-radio">
+      <h2>My Grandmother's Philips Radio</h2>
+      <div class="radio-story">
+        <div class="radio-image">
+          <img src="images/philips-radio.jpg" alt="Restored Philips Radio">
+        </div>
+        <div class="radio-content">
+          <p>This vintage Philips radio belonged to my grandmother. After years of sitting silent in a dusty corner, I undertook the project of restoring it to working condition while preserving its original aesthetic.</p>
+          
+          <h3>The Restoration Process</h3>
+          <ul>
+            <li>Carefully disassembled the radio to assess internal components</li>
+            <li>Replaced damaged capacitors while maintaining period-appropriate parts</li>
+            <li>Restored the wooden cabinet with traditional techniques</li>
+            <li>Repaired the dial mechanism and tuning system</li>
+            <li>Added a subtle modern audio input while preserving the original radio functionality</li>
+          </ul>
+          
+          <p>This project taught me that technology can be both preserved and adapted—a philosophy I bring to my development work. Sometimes the most elegant solutions honor the past while embracing the future.</p>
+          
+          <button id="play-radio-sound" class="btn">Listen to the Radio</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Item Modal -->
+    <div id="gallery-modal" class="modal">
+      <div class="modal-content">
+        <button class="close-btn" aria-label="Close modal">&times;</button>
+        <div id="modal-details">
+          <!-- Modal content will be populated by JavaScript -->
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-info">
+        <p>&copy; <span id="current-year"></span> Luis Eleazar Lizano Rojas | WDD231 Class Project</p>
+        <p>Last Modified: <span id="last-modified"></span></p>
+      </div>
+      <div class="social-links">
+        <a href="https://github.com/luchogator" target="_blank" aria-label="GitHub Profile">
+          <img src="images/github-icon.png" alt="GitHub">
+        </a>
+        <a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn Profile">
+          <img src="images/linkedin-icon.png" alt="LinkedIn">
+        </a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brain, Body, and Code - Personal Website</title>
+  <meta name="description" content="A personal website about wellness, coding, and creativity by Luis Eleazar Lizano Rojas">
+  <meta name="author" content="Luis Eleazar Lizano Rojas">
+
+  <!-- Open Graph / Facebook Meta Tags -->
+  <meta property="og:title" content="Brain, Body, and Code - Personal Website">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://luchogator.github.io/wdd231/bbc/images/logo-bbc.jpg">
+  <meta property="og:url" content="https://luchogator.github.io/wdd231/bbc/index.html">
+  <meta property="og:description" content="A personal website about wellness, coding, and creativity by Luis Eleazar Lizano Rojas">
+  <meta property="og:site_name" content="Brain, Body, and Code">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/base.css">
+
+  <!-- Scripts -->
+  <script defer src="scripts/main.js"></script>
+  <script defer src="scripts/date.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-content">
+      <div class="logo-container">
+        <img src="images/logo-bbc.png" alt="Brain, Body, and Code Logo" class="logo">
+        <div class="site-name">
+          <h1>Brain, Body, and Code</h1>
+          <p class="tagline">Wellness • Development • Creativity</p>
+        </div>
+      </div>
+      <button id="hamburger-btn" aria-label="Toggle Menu">
+        <span>&#9776;</span>
+      </button>
+    </div>
+    <nav>
+      <ul id="primary-nav">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="mind.html">Feed Your Mind</a></li>
+        <li><a href="code.html">Connect with Your Code</a></li>
+        <li><a href="soul.html">Create from the Soul</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h2>Welcome to My Digital Space</h2>
+        <p>A reflection of who I am—a developer passionate about wellness, creativity, and lifelong learning.</p>
+        <div class="cta-buttons">
+          <a href="mind.html" class="btn primary-btn">Explore Wellness</a>
+          <a href="code.html" class="btn secondary-btn">See My Projects</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="intro">
+      <h2>About This Project</h2>
+      <p>This website brings together three key areas of my life: physical and mental well-being, professional development in software, and creative expression through music, art, and family legacy.</p>
+      
+      <div class="section-cards">
+        <div class="card">
+          <img src="images/brain-icon.png" alt="Brain Icon">
+          <h3>Feed Your Mind</h3>
+          <p>Wellness tips, nutrition for brain health, and productivity suggestions for a longer, more conscious life.</p>
+          <a href="mind.html" class="btn">Learn More</a>
+        </div>
+        
+        <div class="card">
+          <img src="images/code-icon.png" alt="Code Icon">
+          <h3>Connect with Your Code</h3>
+          <p>Projects, resources, favorite tools, and reusable code snippets to help you on your development journey.</p>
+          <a href="code.html" class="btn">Learn More</a>
+        </div>
+        
+        <div class="card">
+          <img src="images/soul-icon.png" alt="Soul Icon">
+          <h3>Create from the Soul</h3>
+          <p>Drawings, music experiments, and restored memories that inspire me to keep building and learning.</p>
+          <a href="soul.html" class="btn">Learn More</a>
+        </div>
+      </div>
+    </section>
+    
+    <section class="quote">
+      <blockquote>
+        "It's not just a website—it's a reflection of how I strive to live: with purpose, curiosity, and a desire to keep creating."
+      </blockquote>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-info">
+        <p>&copy; <span id="current-year"></span> Luis Eleazar Lizano Rojas | WDD231 Class Project</p>
+        <p>Last Modified: <span id="last-modified"></span></p>
+      </div>
+      <div class="social-links">
+        <a href="https://github.com/luchogator" target="_blank" aria-label="GitHub Profile">
+          <img src="images/github-icon.png" alt="GitHub">
+        </a>
+        <a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn Profile">
+          <img src="images/linkedin-icon.png" alt="LinkedIn">
+        </a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

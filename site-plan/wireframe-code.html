@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connect with Your Code Wireframe - Brain, Body, and Code</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 20px;
+    }
+    .wireframe {
+      background-color: white;
+      border: 1px solid #ccc;
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .header {
+      border: 2px solid #333;
+      height: 80px;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+    .logo {
+      width: 60px;
+      height: 60px;
+      background-color: #ddd;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+    }
+    .site-name {
+      flex-grow: 1;
+      margin-left: 20px;
+    }
+    .nav {
+      border: 2px solid #333;
+      height: 50px;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    .nav-item {
+      padding: 5px 15px;
+      background-color: #eee;
+    }
+    .hero {
+      border: 2px solid #333;
+      height: 200px;
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      background-color: #f0f0f7; /* Light blue tint for Code section */
+    }
+    .section-title {
+      text-align: center;
+      margin: 30px 0 20px;
+      font-size: 24px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 10px;
+    }
+    .projects-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+    .project-card {
+      border: 2px solid #333;
+      padding: 15px;
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+    }
+    .project-image {
+      height: 100px;
+      background-color: #ddd;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .tools-container {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+    }
+    .tool-card {
+      width: 30%;
+      height: 200px;
+      border: 2px solid #333;
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .tool-icon {
+      width: 50px;
+      height: 50px;
+      background-color: #ddd;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+    .snippets-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+    .snippet-card {
+      border: 2px solid #333;
+      padding: 15px;
+    }
+    .code-block {
+      background-color: #f5f5f5;
+      border: 1px solid #ddd;
+      padding: 15px;
+      margin: 10px 0;
+      height: 120px;
+      overflow: hidden;
+      font-family: monospace;
+      position: relative;
+    }
+    .code-block::after {
+      content: "// Code snippet here";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #999;
+    }
+    .copy-button {
+      background-color: #ddd;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .modal {
+      border: 2px dashed #333;
+      padding: 20px;
+      margin: 20px 0;
+      position: relative;
+    }
+    .modal-title {
+      text-align: center;
+      margin-bottom: 15px;
+      font-size: 20px;
+    }
+    .close-button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 30px;
+      height: 30px;
+      background-color: #ddd;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+    }
+    .footer {
+      border: 2px solid #333;
+      height: 100px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+    .social-links {
+      display: flex;
+      gap: 10px;
+    }
+    .social-icon {
+      width: 30px;
+      height: 30px;
+      background-color: #ddd;
+      border-radius: 50%;
+    }
+    .wireframe-title {
+      text-align: center;
+      margin-bottom: 20px;
+      font-weight: bold;
+      font-size: 24px;
+    }
+    .text-placeholder {
+      background-color: #eee;
+      height: 10px;
+      margin: 10px 0;
+    }
+    .text-placeholder.short {
+      width: 60%;
+    }
+    .text-placeholder.medium {
+      width: 80%;
+    }
+    .text-placeholder.long {
+      width: 100%;
+    }
+    .list-placeholder {
+      margin: 15px 0 15px 20px;
+    }
+    .list-item {
+      background-color: #eee;
+      height: 8px;
+      margin: 8px 0;
+      width: 90%;
+    }
+    .print-button {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    @media print {
+      body {
+        background-color: white;
+        padding: 0;
+      }
+      .print-button {
+        display: none;
+      }
+      .wireframe {
+        box-shadow: none;
+        border: 1px solid #000;
+      }
+    }
+  </style>
+</head>
+<body>
+  <button class="print-button" onclick="window.print()">Print Wireframe</button>
+  
+  <div class="wireframe">
+    <div class="wireframe-title">Connect with Your Code Page Wireframe</div>
+    
+    <div class="header">
+      <div class="logo">Logo</div>
+      <div class="site-name">
+        <div class="text-placeholder medium"></div>
+        <div class="text-placeholder short"></div>
+      </div>
+      <div>Menu</div>
+    </div>
+    
+    <div class="nav">
+      <div class="nav-item">Home</div>
+      <div class="nav-item">Feed Your Mind</div>
+      <div class="nav-item">Connect with Your Code</div>
+      <div class="nav-item">Create from the Soul</div>
+    </div>
+    
+    <div class="hero">
+      <h1>Connect with Your Code</h1>
+      <div class="text-placeholder long"></div>
+      <div class="text-placeholder medium"></div>
+    </div>
+    
+    <div class="section-title">My Projects</div>
+    <div class="text-placeholder long"></div>
+    
+    <div class="projects-container">
+      <div class="project-card">
+        <div class="project-image">Project Image</div>
+        <h3>Project Title</h3>
+        <div class="text-placeholder medium"></div>
+        <div class="text-placeholder short"></div>
+      </div>
+      <div class="project-card">
+        <div class="project-image">Project Image</div>
+        <h3>Project Title</h3>
+        <div class="text-placeholder medium"></div>
+        <div class="text-placeholder short"></div>
+      </div>
+      <div class="project-card">
+        <div class="project-image">Project Image</div>
+        <h3>Project Title</h3>
+        <div class="text-placeholder medium"></div>
+        <div class="text-placeholder short"></div>
+      </div>
+      <div class="project-card">
+        <div class="project-image">Project Image</div>
+        <h3>Project Title</h3>
+        <div class="text-placeholder medium"></div>
+        <div class="text-placeholder short"></div>
+      </div>
+    </div>
+    
+    <div class="section-title">Development Tools I Love</div>
+    <div class="tools-container">
+      <div class="tool-card">
+        <div class="tool-icon"></div>
+        <h3>VS Code</h3>
+        <div class="text-placeholder medium"></div>
+        <div class="list-placeholder">
+          <div class="list-item"></div>
+          <div class="list-item"></div>
+          <div class="list-item"></div>
+        </div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-icon"></div>
+        <h3>Git & GitHub</h3>
+        <div class="text-placeholder medium"></div>
+        <div class="list-placeholder">
+          <div class="list-item"></div>
+          <div class="list-item"></div>
+          <div class="list-item"></div>
+        </div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-icon"></div>
+        <h3>Figma</h3>
+        <div class="text-placeholder medium"></div>
+        <div class="list-placeholder">
+          <div class="list-item"></div>
+          <div class="list-item"></div>
+          <div class="list-item"></div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="section-title">Useful Code Snippets</div>
+    <div class="text-placeholder long"></div>
+    
+    <div class="snippets-container">
+      <div class="snippet-card">
+        <h3>Responsive Grid Layout</h3>
+        <div class="code-block"></div>
+        <button class="copy-button">Copy Code</button>
+      </div>
+      <div class="snippet-card">
+        <h3>Fetch API with Async/Await</h3>
+        <div class="code-block"></div>
+        <button class="copy-button">Copy Code</button>
+      </div>
+      <div class="snippet-card">
+        <h3>Local Storage Helper</h3>
+        <div class="code-block"></div>
+        <button class="copy-button">Copy Code</button>
+      </div>
+    </div>
+    
+    <div class="modal">
+      <div class="close-button">X</div>
+      <div class="modal-title">Project Details</div>
+      <div class="text-placeholder medium"></div>
+      <div style="height: 150px; background-color: #ddd; margin: 15px 0; display: flex; justify-content: center; align-items: center;">
+        Project Screenshot
+      </div>
+      <div class="text-placeholder long"></div>
+      <div class="text-placeholder long"></div>
+      <div class="text-placeholder medium"></div>
+    </div>
+    
+    <div class="footer">
+      <div>
+        <div class="text-placeholder medium"></div>
+        <div class="text-placeholder short"></div>
+      </div>
+      <div class="social-links">
+        <div class="social-icon"></div>
+        <div class="social-icon"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

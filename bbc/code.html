@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connect with Your Code - Brain, Body, and Code</title>
+  <meta name="description" content="Projects, resources, favorite tools, and reusable code snippets to help you on your development journey.">
+  <meta name="author" content="Luis Eleazar Lizano Rojas">
+
+  <!-- Open Graph / Facebook Meta Tags -->
+  <meta property="og:title" content="Connect with Your Code - Brain, Body, and Code">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://luchogator.github.io/wdd231/bbc/images/logo-bbc.jpg">
+  <meta property="og:url" content="https://luchogator.github.io/wdd231/bbc/code.html">
+  <meta property="og:description" content="Projects, resources, favorite tools, and reusable code snippets to help you on your development journey.">
+  <meta property="og:site_name" content="Brain, Body, and Code">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Montserrat:wght@400;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/code.css">
+
+  <!-- Scripts -->
+  <script defer src="scripts/main.js"></script>
+  <script defer src="scripts/date.js"></script>
+  <script defer src="scripts/code.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-content">
+      <div class="logo-container">
+        <img src="images/logo-bbc.png" alt="Brain, Body, and Code Logo" class="logo">
+        <div class="site-name">
+          <h1>Brain, Body, and Code</h1>
+          <p class="tagline">Wellness • Development • Creativity</p>
+        </div>
+      </div>
+      <button id="hamburger-btn" aria-label="Toggle Menu">
+        <span>&#9776;</span>
+      </button>
+    </div>
+    <nav>
+      <ul id="primary-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="mind.html">Feed Your Mind</a></li>
+        <li><a href="code.html" class="active">Connect with Your Code</a></li>
+        <li><a href="soul.html">Create from the Soul</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero code-hero">
+      <div class="hero-content">
+        <h2>Connect with Your Code</h2>
+        <p>Projects, resources, favorite tools, and reusable code snippets to help you on your development journey.</p>
+      </div>
+    </section>
+
+    <section class="projects">
+      <h2>My Projects</h2>
+      <p>Here are some of the projects I've been working on. Click on each card to learn more.</p>
+      
+      <div class="projects-container">
+        <!-- Projects will be loaded from JSON data -->
+      </div>
+    </section>
+
+    <section class="tools">
+      <h2>Development Tools I Love</h2>
+      <div class="tools-container">
+        <div class="tool-card">
+          <img src="images/vscode-icon.png" alt="VS Code Icon">
+          <h3>VS Code</h3>
+          <p>My primary code editor with extensions for productivity and code quality.</p>
+          <div class="tool-details">
+            <h4>Favorite Extensions:</h4>
+            <ul>
+              <li>Live Server</li>
+              <li>ESLint</li>
+              <li>Prettier</li>
+              <li>GitLens</li>
+              <li>Material Icon Theme</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tool-card">
+          <img src="images/git-icon.png" alt="Git Icon">
+          <h3>Git & GitHub</h3>
+          <p>Version control and collaboration tools essential for any developer.</p>
+          <div class="tool-details">
+            <h4>Why I Love It:</h4>
+            <ul>
+              <li>Branching strategies</li>
+              <li>Pull request workflows</li>
+              <li>Issue tracking</li>
+              <li>Project management</li>
+              <li>GitHub Pages for hosting</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tool-card">
+          <img src="images/figma-icon.png" alt="Figma Icon">
+          <h3>Figma</h3>
+          <p>Design tool for creating mockups and prototypes before coding.</p>
+          <div class="tool-details">
+            <h4>Design Workflow:</h4>
+            <ul>
+              <li>Wireframing</li>
+              <li>Interactive prototyping</li>
+              <li>Design system creation</li>
+              <li>Collaboration with teams</li>
+              <li>Developer handoff</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="code-snippets">
+      <h2>Useful Code Snippets</h2>
+      <p>Reusable code snippets that I find myself using frequently.</p>
+      
+      <div class="snippets-container">
+        <div class="snippet-card">
+          <h3>Responsive Grid Layout</h3>
+          <pre><code class="language-css">
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.grid-item {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.grid-item:hover {
+  transform: translateY(-5px);
+}
+          </code></pre>
+          <button class="copy-btn" data-snippet="responsive-grid">Copy Code</button>
+        </div>
+
+        <div class="snippet-card">
+          <h3>Fetch API with Async/Await</h3>
+          <pre><code class="language-javascript">
+async function fetchData(url) {
+  try {
+    const response = await fetch(url);
+    
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+    
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('Fetch error:', error);
+    return null;
+  }
+}
+
+// Usage
+fetchData('data/projects.json')
+  .then(data => {
+    if (data) {
+      // Process the data
+      console.log(data);
+    }
+  });
+          </code></pre>
+          <button class="copy-btn" data-snippet="fetch-async">Copy Code</button>
+        </div>
+
+        <div class="snippet-card">
+          <h3>Local Storage Helper</h3>
+          <pre><code class="language-javascript">
+const storageHelper = {
+  save: function(key, data) {
+    try {
+      const serializedData = JSON.stringify(data);
+      localStorage.setItem(key, serializedData);
+      return true;
+    } catch (error) {
+      console.error('Error saving to localStorage:', error);
+      return false;
+    }
+  },
+  
+  load: function(key) {
+    try {
+      const serializedData = localStorage.getItem(key);
+      if (serializedData === null) return null;
+      return JSON.parse(serializedData);
+    } catch (error) {
+      console.error('Error loading from localStorage:', error);
+      return null;
+    }
+  },
+  
+  remove: function(key) {
+    try {
+      localStorage.removeItem(key);
+      return true;
+    } catch (error) {
+      console.error('Error removing from localStorage:', error);
+      return false;
+    }
+  }
+};
+
+// Usage
+storageHelper.save('user-preferences', { theme: 'dark', fontSize: 16 });
+const preferences = storageHelper.load('user-preferences');
+          </code></pre>
+          <button class="copy-btn" data-snippet="local-storage">Copy Code</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Modal -->
+    <div id="project-modal" class="modal">
+      <div class="modal-content">
+        <button class="close-btn" aria-label="Close modal">&times;</button>
+        <div id="modal-details">
+          <!-- Modal content will be populated by JavaScript -->
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-info">
+        <p>&copy; <span id="current-year"></span> Luis Eleazar Lizano Rojas | WDD231 Class Project</p>
+        <p>Last Modified: <span id="last-modified"></span></p>
+      </div>
+      <div class="social-links">
+        <a href="https://github.com/luchogator" target="_blank" aria-label="GitHub Profile">
+          <img src="images/github-icon.png" alt="GitHub">
+        </a>
+        <a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn Profile">
+          <img src="images/linkedin-icon.png" alt="LinkedIn">
+        </a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
