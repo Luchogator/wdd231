@@ -26,7 +26,7 @@ function displayAttractions(attractions) {
     
     card.innerHTML = `
       <figure>
-        <img src="images/discover/${attraction.image}" 
+        <img src="images/${attraction.image}" 
              alt="${attraction.name}" 
              width="300" 
              height="250"
@@ -68,7 +68,7 @@ function openAttractionModal(id, attractions) {
   // Populate modal content
   modalDetails.innerHTML = `
     <h2>${attraction.name}</h2>
-    <img src="images/discover/${attraction.image}" 
+    <img src="images/${attraction.image}" 
          alt="${attraction.name}" 
          width="700" 
          height="350">
