@@ -17,42 +17,51 @@ function fetchRandomQuote() {
   // Show loading state
   quoteContainer.innerHTML = '<p class="loading">Loading your daily inspiration...</p>';
   
-  // Use a try-catch block for better error handling
-  try {
-    // Fetch from the Quotable API (free, no API key required)
-    fetch('https://api.quotable.io/random?tags=inspirational,wisdom,success')
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        return response.json();
-      })
-      .then(data => {
-        // Create quote HTML
-        const quoteHTML = `
-          <blockquote class="quote">
-            <p class="quote-text">"${data.content}"</p>
-            <footer class="quote-author">— ${data.author}</footer>
-          </blockquote>
-          <button id="new-quote-btn" class="btn mind-btn">
-            <i class="fas fa-sync-alt"></i> New Quote
-          </button>
-        `;
-        
-        // Update the container
-        quoteContainer.innerHTML = quoteHTML;
-        
-        // Add event listener to the new quote button
-        document.getElementById('new-quote-btn').addEventListener('click', fetchRandomQuote);
-      })
-      .catch(error => {
-        console.error('Error fetching quote:', error);
-        handleQuoteError();
-      });
-  } catch (error) {
-    console.error('Error in fetch operation:', error);
-    handleQuoteError();
-  }
+  // Set a timeout to handle slow connections
+  const timeoutPromise = new Promise((_, reject) => {
+    setTimeout(() => reject(new Error('Request timed out')), 5000);
+  });
+  
+  // Try to use the API first, but with a timeout
+  Promise.race([
+    fetch('https://api.quotable.io/random?tags=inspirational,wisdom,success', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      mode: 'cors'
+    }),
+    timeoutPromise
+  ])
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then(data => {
+      // Create quote HTML
+      const quoteHTML = `
+        <blockquote class="quote">
+          <p class="quote-text">"${data.content}"</p>
+          <footer class="quote-author">— ${data.author}</footer>
+        </blockquote>
+        <button id="new-quote-btn" class="btn mind-btn">
+          <i class="fas fa-sync-alt"></i> New Quote
+        </button>
+      `;
+      
+      // Update the container
+      quoteContainer.innerHTML = quoteHTML;
+      
+      // Add event listener to the new quote button
+      document.getElementById('new-quote-btn').addEventListener('click', fetchRandomQuote);
+    })
+    .catch(error => {
+      console.error('Error fetching quote:', error);
+      handleQuoteError();
+    });
 }
 
 // Function to handle errors and display a fallback quote
@@ -80,6 +89,14 @@ function handleQuoteError() {
     {
       content: "Any fool can write code that a computer can understand. Good programmers write code that humans can understand.",
       author: "Martin Fowler"
+    },
+    {
+      content: "Programming isn't about what you know; it's about what you can figure out.",
+      author: "Chris Pine"
+    },
+    {
+      content: "The only way to learn a new programming language is by writing programs in it.",
+      author: "Dennis Ritchie"
     }
   ];
   
@@ -99,7 +116,7 @@ function handleQuoteError() {
   
   quoteContainer.innerHTML = quoteHTML;
   
-  // Add event listener to retry button
+  // Add event listener to the retry button
   document.getElementById('retry-quote-btn').addEventListener('click', fetchRandomQuote);
 }
 
