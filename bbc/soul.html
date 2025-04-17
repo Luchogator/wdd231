@@ -4,39 +4,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Create from the Soul - Brain, Body, and Code</title>
-  <meta name="description" content="Drawings, music experiments, and restored memories that inspire me to keep building and learning.">
-  <meta name="author" content="Luis Eleazar Lizano Rojas">
-
-  <!-- Open Graph / Facebook Meta Tags -->
+  <meta name="description" content="Create from the Soul - Gallery of creative works including drawings, music experiments and restorations that inspire development. Explore digital art, music compositions and creative projects.">
+  <meta name="author" content="Luis Lizano">
+  <meta name="keywords" content="creative coding, digital art, music composition, photo restoration, developer creativity">
+  
+  <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="Create from the Soul - Brain, Body, and Code">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://luchogator.github.io/wdd231/bbc/images/logo-bbc.jpg">
-  <meta property="og:url" content="https://luchogator.github.io/wdd231/bbc/soul.html">
   <meta property="og:description" content="Drawings, music experiments, and restored memories that inspire me to keep building and learning.">
-  <meta property="og:site_name" content="Brain, Body, and Code">
-  <meta property="og:locale" content="en_US">
-
-  <!-- Favicon -->
-  <link rel="icon" href="images/favicon.ico">
-
-  <!-- Google Fonts -->
+  <meta property="og:image" content="images/logo-bbc.png">
+  <meta property="og:url" content="https://luchogator.github.io/wdd231/bbc/soul.html">
+  <meta property="og:type" content="website">
+  
+  <title>Create from the Soul - Brain, Body, and Code</title>
+  
+  <!-- Preconnect to external resources -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
   <!-- CSS -->
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/base.css">
   <link rel="stylesheet" href="styles/soul.css">
-
+  
   <!-- Scripts -->
   <script defer src="scripts/main.js"></script>
   <script defer src="scripts/date.js"></script>
   <script defer src="scripts/soul.js"></script>
 </head>
 
-<body>
+<body class="soul-page">
   <header>
     <div class="header-content">
       <div class="logo-container">
@@ -51,12 +57,14 @@
       </button>
     </div>
     <nav>
-      <ul id="primary-nav">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="mind.html">Feed Your Mind</a></li>
-        <li><a href="code.html">Connect with Your Code</a></li>
-        <li><a href="soul.html" class="active">Create from the Soul</a></li>
-      </ul>
+      <div class="container">
+        <ul id="primary-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="mind.html">Feed Your Mind</a></li>
+          <li><a href="code.html">Connect with Your Code</a></li>
+          <li><a href="soul.html" class="active">Create from the Soul</a></li>
+        </ul>
+      </div>
     </nav>
   </header>
 
@@ -68,8 +76,8 @@
       </div>
     </section>
 
-    <section class="creative-works">
-      <h2>My Creative Gallery</h2>
+    <section class="section creative-works">
+      <h2 class="section-title">My Creative Gallery</h2>
       <p>A collection of my artistic endeavors across different mediums.</p>
       
       <div class="gallery-nav">
@@ -80,82 +88,160 @@
       </div>
       
       <div class="gallery-container">
-        <!-- Gallery items will be loaded from JSON data -->
+        <div class="gallery-item" data-category="drawings">
+          <img src="images/abstract_drawing.png" alt="Abstract Geometric Art">
+          <div class="gallery-overlay">
+            <h3>Abstract Patterns</h3>
+            <p>Exploring geometric shapes and color theory</p>
+          </div>
+        </div>
+        
+        <div class="gallery-item" data-category="restorations">
+          <img src="images/audio_restoration.png" alt="Audio Restoration">
+          <div class="gallery-overlay">
+            <h3>Audio Restoration</h3>
+            <p>Recovering and enhancing vintage recordings</p>
+          </div>
+        </div>
+        
+        <div class="gallery-item" data-category="drawings">
+          <img src="images/photo_restoration.png" alt="Photo Restoration">
+          <div class="gallery-overlay">
+            <h3>Photo Restoration</h3>
+            <p>Preserving memories through digital restoration</p>
+          </div>
+        </div>
+        
+        <div class="gallery-item" data-category="music">
+          <img src="images/piano_composition.png" alt="Piano Composition">
+          <div class="gallery-overlay">
+            <h3>Musical Notation</h3>
+            <p>Original composition for piano</p>
+          </div>
+        </div>
+        
+        <div class="gallery-item" data-category="music">
+          <img src="images/music_composition.png" alt="Music Composition">
+          <div class="gallery-overlay">
+            <h3>Landscape Inspiration</h3>
+            <p>Music inspired by natural scenery</p>
+          </div>
+        </div>
+        
+        <div class="gallery-item" data-category="drawings">
+          <img src="images/digital_illustration.png" alt="Digital Illustration">
+          <div class="gallery-overlay">
+            <h3>Digital Illustration</h3>
+            <p>Created with professional drawing tablet</p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="inspiration">
-      <h2>What Inspires Me</h2>
+    <section class="section inspiration">
+      <h2 class="section-title">What Inspires Me</h2>
       <div class="inspiration-container">
         <div class="inspiration-card">
-          <img src="images/nature-inspiration.jpg" alt="Nature Inspiration">
+          <div class="inspiration-icon">
+            <i class="fas fa-leaf"></i>
+          </div>
           <h3>Nature's Patterns</h3>
           <p>The mathematical precision of natural forms—from the Fibonacci sequence in flower petals to the fractal patterns of coastlines—reminds me that beauty and logic are intertwined.</p>
         </div>
         
         <div class="inspiration-card">
-          <img src="images/music-inspiration.jpg" alt="Music Inspiration">
+          <div class="inspiration-icon">
+            <i class="fas fa-music"></i>
+          </div>
           <h3>Musical Rhythms</h3>
-          <p>The structure and flow of music, particularly in classical compositions and electronic music, influences how I think about code architecture and user experience design.</p>
+          <p>The way music can evoke emotions without words fascinates me. I draw parallels between musical composition and code structure—both require rhythm, pattern recognition, and creative problem-solving.</p>
         </div>
         
         <div class="inspiration-card">
-          <img src="images/family-inspiration.jpg" alt="Family Inspiration">
+          <div class="inspiration-icon">
+            <i class="fas fa-users"></i>
+          </div>
           <h3>Family Heritage</h3>
-          <p>Restoring and preserving family artifacts connects me to previous generations and reminds me that creating things that last requires both technical skill and emotional investment.</p>
+          <p>Preserving and restoring family memories connects me to my roots. These restoration projects have taught me patience and attention to detail that translates directly to my coding practices.</p>
         </div>
       </div>
     </section>
 
-    <section class="philips-radio">
-      <h2>My Grandmother's Philips Radio</h2>
-      <div class="radio-story">
-        <div class="radio-image">
+    <section class="section featured-project">
+      <h2 class="section-title">Featured Restoration Project</h2>
+      <div class="featured-container">
+        <div class="featured-image">
           <img src="images/philips-radio.jpg" alt="Restored Philips Radio">
         </div>
-        <div class="radio-content">
-          <p>This vintage Philips radio belonged to my grandmother. After years of sitting silent in a dusty corner, I undertook the project of restoring it to working condition while preserving its original aesthetic.</p>
-          
-          <h3>The Restoration Process</h3>
+        <div class="featured-content">
+          <h3>1958 Philips Radio Restoration</h3>
+          <p>This vintage Philips radio belonged to my grandfather. After sitting in storage for decades, I carefully restored both its exterior and internal components.</p>
+          <p>The process involved:</p>
           <ul>
-            <li>Carefully disassembled the radio to assess internal components</li>
-            <li>Replaced damaged capacitors while maintaining period-appropriate parts</li>
-            <li>Restored the wooden cabinet with traditional techniques</li>
-            <li>Repaired the dial mechanism and tuning system</li>
-            <li>Added a subtle modern audio input while preserving the original radio functionality</li>
+            <li>Cleaning and refinishing the wooden cabinet</li>
+            <li>Replacing capacitors and resistors</li>
+            <li>Rewiring the power supply for safety</li>
+            <li>Documenting the entire process</li>
           </ul>
-          
-          <p>This project taught me that technology can be both preserved and adapted—a philosophy I bring to my development work. Sometimes the most elegant solutions honor the past while embracing the future.</p>
-          
-          <button id="play-radio-sound" class="btn">Listen to the Radio</button>
+          <p>The radio now works perfectly and serves as both a functional device and a piece of family history on display in my workspace.</p>
         </div>
       </div>
     </section>
 
-    <!-- Gallery Item Modal -->
-    <div id="gallery-modal" class="modal">
-      <div class="modal-content">
-        <button class="close-btn" aria-label="Close modal">&times;</button>
-        <div id="modal-details">
-          <!-- Modal content will be populated by JavaScript -->
+    <section class="section creative-profiles">
+      <h2 class="section-title">My Creative Platforms</h2>
+      <p class="section-intro">Explore more of my creative work across these platforms where I share my art, music, and video content.</p>
+      
+      <div class="profiles-container">
+        <div class="profile-card">
+          <div class="profile-icon">
+            <i class="fab fa-deviantart"></i>
+          </div>
+          <h3>DeviantArt</h3>
+          <p>Discover my digital art, sketches, and creative illustrations.</p>
+          <a href="https://www.deviantart.com/elzorroverde" class="btn soul-btn" target="_blank">
+            <i class="fas fa-palette"></i> View My Artwork
+          </a>
+        </div>
+        
+        <div class="profile-card">
+          <div class="profile-icon">
+            <i class="fab fa-bandcamp"></i>
+          </div>
+          <h3>Bandcamp</h3>
+          <p>Listen to my original music compositions and experimental audio projects.</p>
+          <a href="https://whatisaculpeofox.bandcamp.com/track/nuclear-breeze" class="btn soul-btn" target="_blank">
+            <i class="fas fa-music"></i> Hear My Music
+          </a>
+        </div>
+        
+        <div class="profile-card">
+          <div class="profile-icon">
+            <i class="fab fa-youtube"></i>
+          </div>
+          <h3>YouTube</h3>
+          <p>Watch my videos including tutorials, creative processes, and more.</p>
+          <a href="https://www.youtube.com/@luislizano7025" class="btn soul-btn" target="_blank">
+            <i class="fas fa-video"></i> Watch My Videos
+          </a>
         </div>
       </div>
-    </div>
+    </section>
   </main>
 
   <footer>
     <div class="footer-content">
+      <div class="social-links">
+        <a href="https://github.com/luchogator" target="_blank" aria-label="GitHub Profile">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/luislizano/" target="_blank" aria-label="LinkedIn Profile">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
       <div class="footer-info">
         <p>&copy; <span id="current-year"></span> Luis Eleazar Lizano Rojas | WDD231 Class Project</p>
         <p>Last Modified: <span id="last-modified"></span></p>
-      </div>
-      <div class="social-links">
-        <a href="https://github.com/luchogator" target="_blank" aria-label="GitHub Profile">
-          <img src="images/github-icon.png" alt="GitHub">
-        </a>
-        <a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn Profile">
-          <img src="images/linkedin-icon.png" alt="LinkedIn">
-        </a>
       </div>
     </div>
   </footer>

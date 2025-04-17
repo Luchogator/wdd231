@@ -1,0 +1,360 @@
+/* Styles specific to the Feed Your Mind page */
+
+/* Hero Section with Mind Theme */
+.mind-hero {
+  background-color: rgba(74, 143, 108, 0.1);
+}
+
+.mind-hero h2 {
+  color: var(--primary-green);
+}
+
+/* Wellness Tips Section */
+.wellness-tips {
+  margin-bottom: var(--spacing-xl);
+}
+
+.tips-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-lg);
+}
+
+.tip-card {
+  background-color: var(--white);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform var(--transition-normal);
+}
+
+.tip-card:hover {
+  transform: translateY(-5px);
+}
+
+.tip-icon {
+  font-size: 3rem;
+  color: var(--primary-green);
+  margin-bottom: var(--spacing-md);
+}
+
+.tip-card h3 {
+  color: var(--primary-green);
+  margin-bottom: var(--spacing-sm);
+}
+
+.tip-card ul {
+  text-align: left;
+  padding-left: 1.5rem;
+}
+
+.tip-card li {
+  margin-bottom: 0.5rem;
+}
+
+/* Cooking for Coders Section */
+.cooking-for-coders {
+  background-color: rgba(74, 143, 108, 0.05);
+  padding: var(--spacing-xl) 0;
+  margin-bottom: var(--spacing-xl);
+  text-align: center;
+}
+
+.cooking-for-coders p {
+  max-width: 800px;
+  margin: 0 auto var(--spacing-lg);
+}
+
+.cooking-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.cooking-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-lg);
+}
+
+.cooking-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-lg);
+  width: 100%;
+}
+
+.feature {
+  background-color: var(--white);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-lg);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform var(--transition-normal);
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+}
+
+.feature i {
+  font-size: 2.5rem;
+  color: var(--primary-green);
+  margin-bottom: var(--spacing-md);
+}
+
+.feature h4 {
+  color: var(--primary-green);
+  margin-bottom: var(--spacing-sm);
+  font-size: 1.2rem;
+}
+
+.cooking-cta {
+  margin-top: var(--spacing-md);
+}
+
+.mind-btn {
+  background-color: var(--primary-green);
+  color: var(--white);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius-md);
+  font-weight: 600;
+  transition: background-color var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.mind-btn:hover {
+  background-color: #3a7356;
+}
+
+/* Daily Inspiration Quote Section - Fixed Colors */
+.daily-inspiration {
+  background-color: rgba(74, 143, 108, 0.1);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-lg);
+  margin: var(--spacing-lg) 0;
+  text-align: center;
+  border: 1px solid rgba(74, 143, 108, 0.2);
+}
+
+.inspiration-title {
+  color: var(--primary-green);
+  margin-bottom: var(--spacing-md);
+}
+
+.quote-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.quote {
+  font-style: italic;
+  margin-bottom: var(--spacing-md);
+  position: relative;
+  padding: var(--spacing-md) var(--spacing-lg);
+  background-color: #2c6e9b; /* Fixed blue color */
+  color: white;
+  border-radius: var(--border-radius-md);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.quote-text {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: var(--spacing-sm);
+  color: white;
+}
+
+.quote-author {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: right;
+  display: block;
+  margin-top: var(--spacing-sm);
+}
+
+.api-note {
+  font-size: 0.9rem;
+  color: #666666; /* Fixed gray color */
+  font-style: italic;
+  margin-top: var(--spacing-sm);
+}
+
+#new-quote-btn, #retry-quote-btn {
+  margin-top: var(--spacing-md);
+  background-color: #4a8f6c; /* Fixed green color */
+  color: white;
+  border: none;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#new-quote-btn:hover, #retry-quote-btn:hover {
+  background-color: #3a7859; /* Darker green on hover */
+}
+
+.loading {
+  color: #666666; /* Fixed gray color */
+  font-style: italic;
+}
+
+/* Snack Plan Form */
+.snack-form {
+  background-color: var(--white);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 700px;
+  margin: var(--spacing-lg) auto;
+}
+
+.form-group {
+  margin-bottom: var(--spacing-md);
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: var(--spacing-sm);
+  font-weight: 600;
+  color: var(--dark-gray);
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius-sm);
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.7rem top 50%;
+  background-size: 0.65rem auto;
+  padding-right: 2rem;
+}
+
+.checkbox-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-sm);
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.checkbox-item label {
+  margin: 0;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.checkbox-item input[type="checkbox"] {
+  width: auto;
+  margin: 0;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .checkbox-group {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-buttons {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-lg);
+}
+
+.primary-btn {
+  background-color: var(--primary-green);
+  color: var(--white);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius-md);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.primary-btn:hover {
+  background-color: #3a7356;
+}
+
+.secondary-btn {
+  background-color: var(--light-gray);
+  color: var(--dark-gray);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius-md);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.secondary-btn:hover {
+  background-color: #d0d0d0;
+}
+
+/* Snack Plan Result */
+.snack-plan-result {
+  background-color: rgba(74, 143, 108, 0.1);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-lg);
+  margin-top: var(--spacing-xl);
+  border-left: 4px solid var(--primary-green);
+  transition: all var(--transition-normal);
+}
+
+.snack-plan-result h3 {
+  color: var(--primary-green);
+  margin-bottom: var(--spacing-md);
+}
+
+.snack-recommendations {
+  margin: var(--spacing-md) 0;
+}
+
+.snack-recommendations li {
+  margin-bottom: var(--spacing-sm);
+  padding-left: var(--spacing-sm);
+  border-left: 2px solid var(--primary-green-light);
+}
+
+.hidden {
+  display: none;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .tips-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .cooking-features {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-buttons {
+    flex-direction: column;
+  }
+}

@@ -4,27 +4,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brain, Body, and Code - Personal Website</title>
-  <meta name="description" content="A personal website about wellness, coding, and creativity by Luis Eleazar Lizano Rojas">
-  <meta name="author" content="Luis Eleazar Lizano Rojas">
-
-  <!-- Open Graph / Facebook Meta Tags -->
-  <meta property="og:title" content="Brain, Body, and Code - Personal Website">
+  <meta name="description" content="Explore the connection between mental wellness, programming skills, and creative expression. A project by Luis Lizano for WDD 231 at BYU-Idaho.">
+  <meta name="author" content="Luis Lizano">
+  <meta name="keywords" content="web development, wellness, creativity, programming, mental health">
+  
+  <!-- Open Graph Meta Tags for better social sharing -->
+  <meta property="og:title" content="Brain, Body, and Code">
+  <meta property="og:description" content="Explore the intersection of mental health, coding expertise, and creative expression">
+  <meta property="og:image" content="images/logo-bbc.png">
+  <meta property="og:url" content="https://luchogator.github.io/wdd231/bbc/">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://luchogator.github.io/wdd231/bbc/images/logo-bbc.jpg">
-  <meta property="og:url" content="https://luchogator.github.io/wdd231/bbc/index.html">
-  <meta property="og:description" content="A personal website about wellness, coding, and creativity by Luis Eleazar Lizano Rojas">
-  <meta property="og:site_name" content="Brain, Body, and Code">
-  <meta property="og:locale" content="en_US">
-
-  <!-- Favicon -->
-  <link rel="icon" href="images/favicon.ico">
-
-  <!-- Google Fonts -->
+  
+  <title>Brain, Body, and Code</title>
+  
+  <!-- Preconnect to external resources -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
   <!-- CSS -->
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/base.css">
@@ -34,7 +40,7 @@
   <script defer src="scripts/date.js"></script>
 </head>
 
-<body>
+<body class="home-page">
   <header>
     <div class="header-content">
       <div class="logo-container">
@@ -49,75 +55,112 @@
       </button>
     </div>
     <nav>
-      <ul id="primary-nav">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="mind.html">Feed Your Mind</a></li>
-        <li><a href="code.html">Connect with Your Code</a></li>
-        <li><a href="soul.html">Create from the Soul</a></li>
-      </ul>
+      <div class="container">
+        <ul id="primary-nav">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="mind.html">Nourish your mind</a></li>
+          <li><a href="code.html">Connect with your code</a></li>
+          <li><a href="soul.html">Create from the soul</a></li>
+        </ul>
+      </div>
     </nav>
   </header>
 
   <main>
     <section class="hero">
       <div class="hero-content">
-        <h2>Welcome to My Digital Space</h2>
-        <p>A reflection of who I am—a developer passionate about wellness, creativity, and lifelong learning.</p>
+        <h2>Welcome to my digital space</h2>
+        <p>A reflection of who I am: a developer passionate about wellness, creativity, and continuous learning.</p>
+        <p class="hero-subtitle">Explore the intersection of mental health, coding expertise, and creative expression</p>
         <div class="cta-buttons">
-          <a href="mind.html" class="btn primary-btn">Explore Wellness</a>
-          <a href="code.html" class="btn secondary-btn">See My Projects</a>
+          <a href="mind.html" class="btn mind-btn"><i class="fas fa-brain"></i> Explore wellness</a>
+          <a href="code.html" class="btn code-btn"><i class="fas fa-code"></i> View my projects</a>
         </div>
       </div>
     </section>
 
     <section class="intro">
-      <h2>About This Project</h2>
-      <p>This website brings together three key areas of my life: physical and mental well-being, professional development in software, and creative expression through music, art, and family legacy.</p>
+      <h2>About this project</h2>
+      <p>This website brings together three key areas of my life that I believe are deeply interconnected. By nourishing our minds, perfecting our coding skills, and expressing our creativity, we can live more fulfilling and balanced lives as developers.</p>
       
       <div class="section-cards">
         <div class="card">
-          <img src="images/brain-icon.png" alt="Brain Icon">
-          <h3>Feed Your Mind</h3>
-          <p>Wellness tips, nutrition for brain health, and productivity suggestions for a longer, more conscious life.</p>
-          <a href="mind.html" class="btn">Learn More</a>
+          <div class="card-icon">
+            <i class="fas fa-brain"></i>
+          </div>
+          <h3>Nourish your mind</h3>
+          <p>Wellness tips, brain nutrition, and productivity suggestions for a longer and more conscious life.</p>
+          <a href="mind.html" class="btn mind-btn">Learn more</a>
         </div>
         
         <div class="card">
-          <img src="images/code-icon.png" alt="Code Icon">
-          <h3>Connect with Your Code</h3>
-          <p>Projects, resources, favorite tools, and reusable code snippets to help you on your development journey.</p>
-          <a href="code.html" class="btn">Learn More</a>
+          <div class="card-icon">
+            <i class="fas fa-code"></i>
+          </div>
+          <h3>Connect with your code</h3>
+          <p>Projects, resources, favorite tools, and reusable code snippets to help you on your journey as a developer.</p>
+          <a href="code.html" class="btn code-btn">Learn more</a>
         </div>
         
         <div class="card">
-          <img src="images/soul-icon.png" alt="Soul Icon">
-          <h3>Create from the Soul</h3>
-          <p>Drawings, music experiments, and restored memories that inspire me to keep building and learning.</p>
-          <a href="soul.html" class="btn">Learn More</a>
+          <div class="card-icon">
+            <i class="fas fa-paint-brush"></i>
+          </div>
+          <h3>Create from the soul</h3>
+          <p>Drawings, musical experiments, and restored memories that inspire me to keep building and learning.</p>
+          <a href="soul.html" class="btn soul-btn">Learn more</a>
         </div>
       </div>
     </section>
     
     <section class="quote">
-      <blockquote>
-        "It's not just a website—it's a reflection of how I strive to live: with purpose, curiosity, and a desire to keep creating."
-      </blockquote>
+      <div class="quote-content">
+        <i class="quote-mark open fas fa-quote-left"></i>
+        <blockquote>
+          It's not just a website, it's a reflection of how I try to live: with purpose, curiosity, and the desire to keep creating.
+        </blockquote>
+        <i class="quote-mark close fas fa-quote-right"></i>
+      </div>
+    </section>
+    
+    <section class="demo-video">
+      <div class="container">
+        <h2>Project Demonstration</h2>
+        <p>Watch a 3-minute demonstration of this project's features and technical implementation.</p>
+        <div class="video-container">
+          <a href="https://www.loom.com/share/9b8acd4018ec4a9fb71554ea3c32a2e2?sid=9f29f21b-90d7-4499-b04a-0e1468e1df4c" target="_blank" class="btn primary-btn">
+            <i class="fas fa-play-circle"></i> Watch Demo Video
+          </a>
+          <p class="video-note">Video created by Luis Lizano for WDD 231 - Web Frontend Development at BYU-Idaho</p>
+        </div>
+      </div>
+    </section>
+    
+    <section class="newsletter">
+      <div class="newsletter-content">
+        <h2>Stay updated</h2>
+        <p>Subscribe to receive notifications about new content, projects, and wellness tips.</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Your email address" required>
+          <button type="submit" class="btn primary-btn">Subscribe</button>
+        </form>
+      </div>
     </section>
   </main>
 
   <footer>
     <div class="footer-content">
-      <div class="footer-info">
-        <p>&copy; <span id="current-year"></span> Luis Eleazar Lizano Rojas | WDD231 Class Project</p>
-        <p>Last Modified: <span id="last-modified"></span></p>
-      </div>
       <div class="social-links">
-        <a href="https://github.com/luchogator" target="_blank" aria-label="GitHub Profile">
-          <img src="images/github-icon.png" alt="GitHub">
+        <a href="https://github.com/luchogator" target="_blank" aria-label="GitHub profile">
+          <i class="fab fa-github"></i>
         </a>
-        <a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn Profile">
-          <img src="images/linkedin-icon.png" alt="LinkedIn">
+        <a href="https://www.linkedin.com/in/luislizano/" target="_blank" aria-label="LinkedIn profile">
+          <i class="fab fa-linkedin"></i>
         </a>
+      </div>
+      <div class="footer-info">
+        <p>&copy; <span id="current-year"></span> Luis Eleazar Lizano Rojas | WDD231 class project</p>
+        <p>Last modified: <span id="last-modified"></span></p>
       </div>
     </div>
   </footer>

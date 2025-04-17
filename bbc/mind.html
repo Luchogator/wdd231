@@ -4,39 +4,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Feed Your Mind - Brain, Body, and Code</title>
-  <meta name="description" content="Wellness tips, nutrition for brain health, and productivity suggestions for a longer, more conscious life.">
-  <meta name="author" content="Luis Eleazar Lizano Rojas">
-
-  <!-- Open Graph / Facebook Meta Tags -->
+  <meta name="description" content="Feed Your Mind - Wellness tips, nutrition for brain health, and productivity suggestions for developers. Includes daily inspirational quotes.">
+  <meta name="author" content="Luis Lizano">
+  <meta name="keywords" content="developer wellness, brain health, productivity, mental health for coders">
+  
+  <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="Feed Your Mind - Brain, Body, and Code">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://luchogator.github.io/wdd231/bbc/images/logo-bbc.jpg">
+  <meta property="og:description" content="Wellness tips, nutrition for brain health, and productivity suggestions for developers.">
+  <meta property="og:image" content="images/logo-bbc.png">
   <meta property="og:url" content="https://luchogator.github.io/wdd231/bbc/mind.html">
-  <meta property="og:description" content="Wellness tips, nutrition for brain health, and productivity suggestions for a longer, more conscious life.">
-  <meta property="og:site_name" content="Brain, Body, and Code">
-  <meta property="og:locale" content="en_US">
-
-  <!-- Favicon -->
-  <link rel="icon" href="images/favicon.ico">
-
-  <!-- Google Fonts -->
+  <meta property="og:type" content="website">
+  
+  <title>Feed Your Mind - Brain, Body, and Code</title>
+  
+  <!-- Preconnect to external resources -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://api.quotable.io">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
   <!-- CSS -->
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/base.css">
   <link rel="stylesheet" href="styles/mind.css">
-
+  
   <!-- Scripts -->
   <script defer src="scripts/main.js"></script>
   <script defer src="scripts/date.js"></script>
   <script defer src="scripts/mind.js"></script>
 </head>
 
-<body>
+<body class="mind-page">
   <header>
     <div class="header-content">
       <div class="logo-container">
@@ -51,12 +58,14 @@
       </button>
     </div>
     <nav>
-      <ul id="primary-nav">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="mind.html" class="active">Feed Your Mind</a></li>
-        <li><a href="code.html">Connect with Your Code</a></li>
-        <li><a href="soul.html">Create from the Soul</a></li>
-      </ul>
+      <div class="container">
+        <ul id="primary-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="mind.html" class="active">Feed Your Mind</a></li>
+          <li><a href="code.html">Connect with Your Code</a></li>
+          <li><a href="soul.html">Create from the Soul</a></li>
+        </ul>
+      </div>
     </nav>
   </header>
 
@@ -68,11 +77,22 @@
       </div>
     </section>
 
-    <section class="wellness-tips">
-      <h2>Brain Health Essentials</h2>
+    <section class="section wellness-tips">
+      <h2 class="section-title">Brain Health Essentials</h2>
+      <p>As developers, we often spend long hours in front of screens, which can take a toll on our physical and mental health. Here are some evidence-based tips to maintain wellness while coding:</p>
+      
+      <div class="daily-inspiration">
+        <h3 class="inspiration-title">Daily Inspiration</h3>
+        <div id="daily-quote" class="quote-container">
+          <!-- Quote will be loaded from API -->
+        </div>
+      </div>
+      
       <div class="tips-container">
         <article class="tip-card">
-          <img src="images/nutrition-icon.png" alt="Nutrition Icon">
+          <div class="tip-icon">
+            <i class="fas fa-apple-alt"></i>
+          </div>
           <h3>Nutrition for Developers</h3>
           <p>Foods that boost cognitive function, improve focus, and help maintain energy levels during long coding sessions.</p>
           <ul>
@@ -85,7 +105,9 @@
         </article>
 
         <article class="tip-card">
-          <img src="images/productivity-icon.png" alt="Productivity Icon">
+          <div class="tip-icon">
+            <i class="fas fa-tasks"></i>
+          </div>
           <h3>Productivity Habits</h3>
           <p>Techniques to maintain focus and productivity while avoiding burnout.</p>
           <ul>
@@ -98,7 +120,9 @@
         </article>
 
         <article class="tip-card">
-          <img src="images/sleep-icon.png" alt="Sleep Icon">
+          <div class="tip-icon">
+            <i class="fas fa-moon"></i>
+          </div>
           <h3>Sleep Optimization</h3>
           <p>How quality sleep impacts cognitive function and creativity.</p>
           <ul>
@@ -112,9 +136,41 @@
       </div>
     </section>
 
-    <section class="snack-plan">
-      <h2>Personalized Snack Plan for Programmers</h2>
-      <p>Create your customized healthy snack plan to fuel your coding sessions.</p>
+    <section class="section cooking-for-coders">
+      <h2 class="section-title">Cooking for Coders</h2>
+      <p>Fuel your brain with quick, healthy, and developer-friendly recipes designed to boost productivity and cognitive function.</p>
+      
+      <div class="cooking-container">
+        <div class="cooking-info">
+          <div class="cooking-features">
+            <div class="feature">
+              <i class="fas fa-clock"></i>
+              <h4>Save Time</h4>
+              <p>Nutritious meals ready in 15 minutes or less, perfect for busy developers.</p>
+            </div>
+            <div class="feature">
+              <i class="fas fa-seedling"></i>
+              <h4>Healthy & Nutritious</h4>
+              <p>Balanced meals designed to enhance cognitive function and energy levels.</p>
+            </div>
+            <div class="feature">
+              <i class="fas fa-laptop-code"></i>
+              <h4>Dev-Friendly</h4>
+              <p>Recipes optimized for coders with minimal cleanup and maximum brain benefits.</p>
+            </div>
+          </div>
+          <div class="cooking-cta">
+            <a href="https://luchogator.github.io/wdd131/project/index.html" class="btn mind-btn" target="_blank">
+              <i class="fas fa-utensils"></i> Explore Dev Recipes
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section snack-plan">
+      <h2 class="section-title">Personalized Snack Plan for Programmers</h2>
+      <p>Create your customized healthy snack plan to fuel your coding sessions. Fill out the form below to receive suggestions tailored to your preferences and work habits.</p>
       
       <form id="snack-form" class="snack-form">
         <div class="form-group">
@@ -142,34 +198,50 @@
         <div class="form-group">
           <label>Energy Level Goals:</label>
           <div class="checkbox-group">
-            <input type="checkbox" id="sustained-energy" name="energy-goals" value="sustained-energy">
-            <label for="sustained-energy">Sustained Energy</label>
+            <div class="checkbox-item">
+              <input type="checkbox" id="sustained-energy" name="energy-goals" value="sustained-energy">
+              <label for="sustained-energy">Sustained Energy</label>
+            </div>
             
-            <input type="checkbox" id="mental-clarity" name="energy-goals" value="mental-clarity">
-            <label for="mental-clarity">Mental Clarity</label>
+            <div class="checkbox-item">
+              <input type="checkbox" id="mental-clarity" name="energy-goals" value="mental-clarity">
+              <label for="mental-clarity">Mental Clarity</label>
+            </div>
             
-            <input type="checkbox" id="focus-improvement" name="energy-goals" value="focus-improvement">
-            <label for="focus-improvement">Focus Improvement</label>
+            <div class="checkbox-item">
+              <input type="checkbox" id="focus-improvement" name="energy-goals" value="focus-improvement">
+              <label for="focus-improvement">Focus Improvement</label>
+            </div>
             
-            <input type="checkbox" id="stress-reduction" name="energy-goals" value="stress-reduction">
-            <label for="stress-reduction">Stress Reduction</label>
+            <div class="checkbox-item">
+              <input type="checkbox" id="stress-reduction" name="energy-goals" value="stress-reduction">
+              <label for="stress-reduction">Stress Reduction</label>
+            </div>
           </div>
         </div>
         
         <div class="form-group">
           <label>Snack Preferences:</label>
           <div class="checkbox-group">
-            <input type="checkbox" id="sweet" name="snack-preferences" value="sweet">
-            <label for="sweet">Sweet</label>
+            <div class="checkbox-item">
+              <input type="checkbox" id="sweet" name="snack-preferences" value="sweet">
+              <label for="sweet">Sweet</label>
+            </div>
             
-            <input type="checkbox" id="savory" name="snack-preferences" value="savory">
-            <label for="savory">Savory</label>
+            <div class="checkbox-item">
+              <input type="checkbox" id="savory" name="snack-preferences" value="savory">
+              <label for="savory">Savory</label>
+            </div>
             
-            <input type="checkbox" id="crunchy" name="snack-preferences" value="crunchy">
-            <label for="crunchy">Crunchy</label>
+            <div class="checkbox-item">
+              <input type="checkbox" id="crunchy" name="snack-preferences" value="crunchy">
+              <label for="crunchy">Crunchy</label>
+            </div>
             
-            <input type="checkbox" id="soft" name="snack-preferences" value="soft">
-            <label for="soft">Soft</label>
+            <div class="checkbox-item">
+              <input type="checkbox" id="soft" name="snack-preferences" value="soft">
+              <label for="soft">Soft</label>
+            </div>
           </div>
         </div>
         
@@ -184,25 +256,23 @@
         </div>
       </form>
       
-      <div id="snack-plan-result" class="snack-plan-result hidden">
-        <!-- Results will be populated by JavaScript -->
-      </div>
+      <div id="snack-plan-result" class="snack-plan-result hidden"></div>
     </section>
   </main>
 
   <footer>
     <div class="footer-content">
+      <div class="social-links">
+        <a href="https://github.com/luchogator" target="_blank" aria-label="GitHub Profile">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/luislizano/" target="_blank" aria-label="LinkedIn Profile">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
       <div class="footer-info">
         <p>&copy; <span id="current-year"></span> Luis Eleazar Lizano Rojas | WDD231 Class Project</p>
         <p>Last Modified: <span id="last-modified"></span></p>
-      </div>
-      <div class="social-links">
-        <a href="https://github.com/luchogator" target="_blank" aria-label="GitHub Profile">
-          <img src="images/github-icon.png" alt="GitHub">
-        </a>
-        <a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn Profile">
-          <img src="images/linkedin-icon.png" alt="LinkedIn">
-        </a>
       </div>
     </div>
   </footer>

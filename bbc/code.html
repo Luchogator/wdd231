@@ -4,39 +4,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Connect with Your Code - Brain, Body, and Code</title>
-  <meta name="description" content="Projects, resources, favorite tools, and reusable code snippets to help you on your development journey.">
-  <meta name="author" content="Luis Eleazar Lizano Rojas">
-
-  <!-- Open Graph / Facebook Meta Tags -->
+  <meta name="description" content="Connect with Your Code - Projects, resources, favorite tools, and reusable code snippets for web developers. Includes links to Luis Lizano's projects.">
+  <meta name="author" content="Luis Lizano">
+  <meta name="keywords" content="web development, coding projects, programming resources, code snippets">
+  
+  <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="Connect with Your Code - Brain, Body, and Code">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://luchogator.github.io/wdd231/bbc/images/logo-bbc.jpg">
+  <meta property="og:description" content="Projects, resources, favorite tools, and reusable code snippets for developers.">
+  <meta property="og:image" content="images/logo-bbc.png">
   <meta property="og:url" content="https://luchogator.github.io/wdd231/bbc/code.html">
-  <meta property="og:description" content="Projects, resources, favorite tools, and reusable code snippets to help you on your development journey.">
-  <meta property="og:site_name" content="Brain, Body, and Code">
-  <meta property="og:locale" content="en_US">
-
-  <!-- Favicon -->
-  <link rel="icon" href="images/favicon.ico">
-
-  <!-- Google Fonts -->
+  <meta property="og:type" content="website">
+  
+  <title>Connect with Your Code - Brain, Body, and Code</title>
+  
+  <!-- Preconnect to external resources -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Montserrat:wght@400;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
-
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
   <!-- CSS -->
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/base.css">
   <link rel="stylesheet" href="styles/code.css">
-
+  
   <!-- Scripts -->
   <script defer src="scripts/main.js"></script>
   <script defer src="scripts/date.js"></script>
   <script defer src="scripts/code.js"></script>
 </head>
 
-<body>
+<body class="code-page">
   <header>
     <div class="header-content">
       <div class="logo-container">
@@ -51,12 +57,14 @@
       </button>
     </div>
     <nav>
-      <ul id="primary-nav">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="mind.html">Feed Your Mind</a></li>
-        <li><a href="code.html" class="active">Connect with Your Code</a></li>
-        <li><a href="soul.html">Create from the Soul</a></li>
-      </ul>
+      <div class="container">
+        <ul id="primary-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="mind.html">Feed Your Mind</a></li>
+          <li><a href="code.html" class="active">Connect with Your Code</a></li>
+          <li><a href="soul.html">Create from the Soul</a></li>
+        </ul>
+      </div>
     </nav>
   </header>
 
@@ -68,20 +76,69 @@
       </div>
     </section>
 
-    <section class="projects">
-      <h2>My Projects</h2>
+    <section class="section projects">
+      <h2 class="section-title">My Projects</h2>
       <p>Here are some of the projects I've been working on. Click on each card to learn more.</p>
       
       <div class="projects-container">
-        <!-- Projects will be loaded from JSON data -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="images/chamber-logo.webp" alt="Chamber of Commerce Project">
+          </div>
+          <div class="project-content">
+            <h3>Chamber of Commerce</h3>
+            <p>A responsive website for a local chamber of commerce with interactive features and dynamic content loading.</p>
+            <div class="project-tech">
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+              <span class="tech-tag">JavaScript</span>
+            </div>
+            <a href="https://luchogator.github.io/wdd231/chamber/index.html" class="btn code-btn" target="_blank">View Project</a>
+          </div>
+        </div>
+        
+        <div class="project-card">
+          <div class="project-image">
+            <img src="images/swiss-flag.webp" alt="Weather App Project">
+          </div>
+          <div class="project-content">
+            <h3>Weather Dashboard</h3>
+            <p>An interactive weather application that fetches real-time data from a weather API and displays forecasts.</p>
+            <div class="project-tech">
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">API</span>
+            </div>
+            <a href="https://luchogator.github.io/wdd131/place.html" class="btn code-btn" target="_blank">View Project</a>
+          </div>
+        </div>
+        
+        <div class="project-card">
+          <div class="project-image">
+            <img src="images/rafting-logo.webp" alt="Rafting Site Project">
+          </div>
+          <div class="project-content">
+            <h3>Rafting Site</h3>
+            <p>A responsive website for a white water rafting company with beautiful imagery and engaging content.</p>
+            <div class="project-tech">
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+              <span class="tech-tag">Responsive Design</span>
+            </div>
+            <a href="https://luchogator.github.io/wdd130/wwr/" class="btn code-btn" target="_blank">View Project</a>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="tools">
-      <h2>Development Tools I Love</h2>
+    <section class="section tools">
+      <h2 class="section-title">Development Tools I Love</h2>
       <div class="tools-container">
         <div class="tool-card">
-          <img src="images/vscode-icon.png" alt="VS Code Icon">
+          <div class="tool-icon">
+            <i class="fas fa-code"></i>
+          </div>
           <h3>VS Code</h3>
           <p>My primary code editor with extensions for productivity and code quality.</p>
           <div class="tool-details">
@@ -95,106 +152,59 @@
             </ul>
           </div>
         </div>
-
+        
         <div class="tool-card">
-          <img src="images/git-icon.png" alt="Git Icon">
+          <div class="tool-icon">
+            <i class="fab fa-git-alt"></i>
+          </div>
           <h3>Git & GitHub</h3>
-          <p>Version control and collaboration tools essential for any developer.</p>
+          <p>Version control system and platform for collaboration and project management.</p>
           <div class="tool-details">
-            <h4>Why I Love It:</h4>
+            <h4>Favorite Features:</h4>
             <ul>
-              <li>Branching strategies</li>
-              <li>Pull request workflows</li>
-              <li>Issue tracking</li>
-              <li>Project management</li>
-              <li>GitHub Pages for hosting</li>
+              <li>Branch Management</li>
+              <li>Pull Requests</li>
+              <li>GitHub Pages</li>
+              <li>Issue Tracking</li>
+              <li>GitHub Actions</li>
             </ul>
           </div>
         </div>
-
+        
         <div class="tool-card">
-          <img src="images/figma-icon.png" alt="Figma Icon">
+          <div class="tool-icon">
+            <i class="fab fa-figma"></i>
+          </div>
           <h3>Figma</h3>
-          <p>Design tool for creating mockups and prototypes before coding.</p>
+          <p>Design tool for creating wireframes, prototypes, and collaborating with designers.</p>
           <div class="tool-details">
-            <h4>Design Workflow:</h4>
+            <h4>Favorite Features:</h4>
             <ul>
-              <li>Wireframing</li>
-              <li>Interactive prototyping</li>
-              <li>Design system creation</li>
-              <li>Collaboration with teams</li>
-              <li>Developer handoff</li>
+              <li>Component Libraries</li>
+              <li>Auto Layout</li>
+              <li>Prototyping</li>
+              <li>Design Systems</li>
+              <li>Developer Handoff</li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="code-snippets">
-      <h2>Useful Code Snippets</h2>
-      <p>Reusable code snippets that I find myself using frequently.</p>
+    <section class="section snippets">
+      <h2 class="section-title">Useful Code Snippets</h2>
+      <p>Here are some reusable code snippets that I find myself using frequently in projects.</p>
       
       <div class="snippets-container">
         <div class="snippet-card">
-          <h3>Responsive Grid Layout</h3>
-          <pre><code class="language-css">
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1rem;
-  padding: 1rem;
-}
-
-.grid-item {
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  padding: 1.5rem;
-  transition: transform 0.3s ease;
-}
-
-.grid-item:hover {
-  transform: translateY(-5px);
-}
-          </code></pre>
-          <button class="copy-btn" data-snippet="responsive-grid">Copy Code</button>
-        </div>
-
-        <div class="snippet-card">
-          <h3>Fetch API with Async/Await</h3>
-          <pre><code class="language-javascript">
-async function fetchData(url) {
-  try {
-    const response = await fetch(url);
-    
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
-    }
-    
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    console.error('Fetch error:', error);
-    return null;
-  }
-}
-
-// Usage
-fetchData('data/projects.json')
-  .then(data => {
-    if (data) {
-      // Process the data
-      console.log(data);
-    }
-  });
-          </code></pre>
-          <button class="copy-btn" data-snippet="fetch-async">Copy Code</button>
-        </div>
-
-        <div class="snippet-card">
           <h3>Local Storage Helper</h3>
-          <pre><code class="language-javascript">
-const storageHelper = {
+          <div class="snippet-header">
+            <span class="language-tag">JavaScript</span>
+            <button class="copy-btn" data-snippet="local-storage-helper">
+              <i class="far fa-copy"></i> Copy
+            </button>
+          </div>
+          <pre><code class="language-javascript" id="local-storage-helper">const storageHelper = {
   save: function(key, data) {
     try {
       const serializedData = JSON.stringify(data);
@@ -226,41 +236,179 @@ const storageHelper = {
       return false;
     }
   }
-};
+};</code></pre>
+        </div>
+        
+        <div class="snippet-card">
+          <h3>Responsive Image Loader</h3>
+          <div class="snippet-header">
+            <span class="language-tag">JavaScript</span>
+            <button class="copy-btn" data-snippet="responsive-image-loader">
+              <i class="far fa-copy"></i> Copy
+            </button>
+          </div>
+          <pre><code class="language-javascript" id="responsive-image-loader">function loadResponsiveImage(imgElement, mobileSrc, tabletSrc, desktopSrc) {
+  const updateSrc = () => {
+    const width = window.innerWidth;
+    if (width < 768) {
+      imgElement.src = mobileSrc;
+    } else if (width < 1024) {
+      imgElement.src = tabletSrc;
+    } else {
+      imgElement.src = desktopSrc;
+    }
+  };
+  
+  // Initial load
+  updateSrc();
+  
+  // Update on resize
+  window.addEventListener('resize', updateSrc);
+  
+  return {
+    // Cleanup function
+    destroy: () => window.removeEventListener('resize', updateSrc)
+  };
+}</code></pre>
+        </div>
 
-// Usage
-storageHelper.save('user-preferences', { theme: 'dark', fontSize: 16 });
-const preferences = storageHelper.load('user-preferences');
-          </code></pre>
-          <button class="copy-btn" data-snippet="local-storage">Copy Code</button>
+        <div class="snippet-card">
+          <h3>Fetch API Helper</h3>
+          <div class="snippet-header">
+            <span class="language-tag">JavaScript</span>
+            <button class="copy-btn" data-snippet="fetch-api-helper">
+              <i class="far fa-copy"></i> Copy
+            </button>
+          </div>
+          <pre><code class="language-javascript" id="fetch-api-helper">const fetchHelper = {
+  get: async function(url, options = {}) {
+    try {
+      const response = await fetch(url, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          ...options.headers
+        },
+        ...options
+      });
+      
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+      
+      return await response.json();
+    } catch (error) {
+      console.error('Fetch error:', error);
+      throw error;
+    }
+  },
+  
+  post: async function(url, data, options = {}) {
+    try {
+      const response = await fetch(url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          ...options.headers
+        },
+        body: JSON.stringify(data),
+        ...options
+      });
+      
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+      
+      return await response.json();
+    } catch (error) {
+      console.error('Fetch error:', error);
+      throw error;
+    }
+  }
+};</code></pre>
+        </div>
+
+        <div class="snippet-card">
+          <h3>Form Validation Helper</h3>
+          <div class="snippet-header">
+            <span class="language-tag">JavaScript</span>
+            <button class="copy-btn" data-snippet="form-validation-helper">
+              <i class="far fa-copy"></i> Copy
+            </button>
+          </div>
+          <pre><code class="language-javascript" id="form-validation-helper">const formValidator = {
+  isEmail: function(value) {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(value);
+  },
+  
+  isNotEmpty: function(value) {
+    return value !== null && value !== undefined && value.trim() !== '';
+  },
+  
+  isNumber: function(value) {
+    return !isNaN(parseFloat(value)) && isFinite(value);
+  },
+  
+  isInRange: function(value, min, max) {
+    const num = parseFloat(value);
+    return !isNaN(num) && num >= min && num <= max;
+  },
+  
+  validateForm: function(formData, rules) {
+    const errors = {};
+    
+    for (const field in rules) {
+      const value = formData[field];
+      const fieldRules = rules[field];
+      
+      for (const rule of fieldRules) {
+        if (rule.type === 'required' && !this.isNotEmpty(value)) {
+          errors[field] = rule.message || 'This field is required';
+          break;
+        }
+        
+        if (value && rule.type === 'email' && !this.isEmail(value)) {
+          errors[field] = rule.message || 'Invalid email format';
+          break;
+        }
+        
+        if (value && rule.type === 'number' && !this.isNumber(value)) {
+          errors[field] = rule.message || 'Must be a number';
+          break;
+        }
+        
+        if (value && rule.type === 'range' && !this.isInRange(value, rule.min, rule.max)) {
+          errors[field] = rule.message || `Value must be between ${rule.min} and ${rule.max}`;
+          break;
+        }
+      }
+    }
+    
+    return {
+      isValid: Object.keys(errors).length === 0,
+      errors
+    };
+  }
+};</code></pre>
         </div>
       </div>
     </section>
-
-    <!-- Project Modal -->
-    <div id="project-modal" class="modal">
-      <div class="modal-content">
-        <button class="close-btn" aria-label="Close modal">&times;</button>
-        <div id="modal-details">
-          <!-- Modal content will be populated by JavaScript -->
-        </div>
-      </div>
-    </div>
   </main>
 
   <footer>
     <div class="footer-content">
+      <div class="social-links">
+        <a href="https://github.com/luchogator" target="_blank" aria-label="GitHub Profile">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/luislizano/" target="_blank" aria-label="LinkedIn Profile">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
       <div class="footer-info">
         <p>&copy; <span id="current-year"></span> Luis Eleazar Lizano Rojas | WDD231 Class Project</p>
         <p>Last Modified: <span id="last-modified"></span></p>
-      </div>
-      <div class="social-links">
-        <a href="https://github.com/luchogator" target="_blank" aria-label="GitHub Profile">
-          <img src="images/github-icon.png" alt="GitHub">
-        </a>
-        <a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn Profile">
-          <img src="images/linkedin-icon.png" alt="LinkedIn">
-        </a>
       </div>
     </div>
   </footer>
